@@ -1,2 +1,4 @@
-# ip20241
+# Laboratório de Programação Python
+
 REPOSITÓRIO DA DISCIPLINA DE LABORATÓRIO DE PROGRAMAÇÃO DO CURSO DE REDES
+
