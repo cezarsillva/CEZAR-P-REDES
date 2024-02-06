@@ -9,19 +9,78 @@ Exercícios sobre os comandos básicos em Python
 
 #1. Faça um programa que imprima o seu nome.
 
+#print(f'exercicios 1') 
+
+
+#nome = input ('Digite seu nome: ')
+#print(f'Olá {nome}. Seja bem vindo(a)!')
+
+
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
+
+
+#valor1 = int(input ('Digite o primeiro valor:'))
+#valor2 = int(input ('Digite o segundo valor:'))
+
+#produto = (valor1 * valor2)
+
+#print(f'O valor do produto é : {produto}')
+
+
+
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
 
+
+#valor1 = int(input ('Digite o primeiro valor:'))
+#valor2 = int(input ('Digite o segundo valor:'))
+#valor3 = int(input ('Digite o segundo valor:'))
+
+
+#Média = ((valor1 + valor2 + valor3)/ 3)
+
+
+#print(f'A média é : {Média}')
+
+
+
 #4. Faça um programa que leia e imprima um número inteiro.
+
+
+#numero= int(input ('Digite um numero inteiro:'))
+
+#print(numero)
+
 
 #5. Faça um programa que leia dois números reais e os imprima.
 
+
+#numero1= int(input ('Digite o primeiro numero:'))
+#numero2 = int(input ('Digite o segundo numero:'))
+
+
+#print(f'O primeiro número é: {numero1} O segundo número é: {numero2}')
+
+
+
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
-  
+
+numero = int(input ('Digite o primeiro numero:'))
+
+
+print(numero + 1)
+print(numero - 1)
+
+
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
+
+
+
+
+
+
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
