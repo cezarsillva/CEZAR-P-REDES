@@ -66,11 +66,11 @@ Exercícios sobre os comandos básicos em Python
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
 
-numero = int(input ('Digite o primeiro numero:'))
+#numero = int(input ('Digite o valor: '))
 
 
-print(numero + 1)
-print(numero - 1)
+#print(f'{numero + 1}')
+#print(f' {numero - 1}')
 
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
@@ -78,6 +78,15 @@ print(numero - 1)
 
 
 
+
+nome= str(input ('Digite o nome do cliente: '))
+endereço = str(input ('Digite o endereço do cliente : '))
+telefone = int(input ('Digite o telefone do cliente: '))
+
+
+print(f'O nome do cliente é : {nome}')
+print(f'O endereço do cliente é : {endereço}')
+print(f'O telefone do cliente é : {telefone}')
 
 
 
