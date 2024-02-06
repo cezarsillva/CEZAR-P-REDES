@@ -54,3 +54,4 @@ novopreco = preço - (preço * porcent / 100 )
 
 
 print(f'O valor do produto com desconto é : {novopreco}.')
+
