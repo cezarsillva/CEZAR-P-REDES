@@ -173,19 +173,52 @@ Exercícios sobre os comandos básicos em Python
 #    imprimir o resultado do cálculo.
 
 
+#numero= int(input ('Digite o primeiro numero:'))
 
 
+#quadrado = (numero ** 2)
 
+#print("\n")
 
+#print(f'o quadrado de {numero}: {quadrado}')
 
+#print("\n")
 
 #print(f'------------------------------------------------------------------------')
+
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
+
+
+#saldo = float(input ('Digite o valor de saldo :'))
+#taxa = float(input ('Digite o valor da taxa:'))
+
+#print("\n")
+
+#novosaldo = saldo + (saldo * (taxa / 100))
+
+#print(f'O novo saldo com o acréscimo de {taxa} é: R$ {novosaldo}')
+
+#print("\n")
+
+#print(f'------------------------------------------------------------------------')
 
 #14. Faça um programa que leia a base e a altura de um retângulo
 #    e imprima o perímetro (base + altura) e a área (base * altura).
 
+
+base= float(input ('Digite o valor da base:'))
+altura = float(input ('Digite o valor da altura:'))
+
+perímetro = 2 * (base + altura)
+área = (base * altura)
+
+print(f'O perímetro do retangualo é: {perímetro}')
+print(f'A área do retangualo é: {área}')
+
+
+
+#print(f'------------------------------------------------------------------------')
 #15. Faça um programa que leia o valor de um produto, o percentual
 #    do desconto desejado e imprima o valor do desconto e o valor
 #    do produto subtraindo o desconto.
