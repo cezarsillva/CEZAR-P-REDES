@@ -117,26 +117,69 @@ Exercícios sobre os comandos básicos em Python
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 
-numero = float(input('Digite um número: '))
+#numero = float(input('Digite um número: '))
 
-fração = numero * (1/4)
+#fração = numero * (1/4)
 
-print(f'A quarta parte do numero {numero} é : {fração}')
+#print(f'A quarta parte do numero {numero} é : {fração}')
 
 #print(f'------------------------------------------------------------------------')
+
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+
+
+#nota1 = int(input ('Digite o primeiro valor:'))
+#nota2 = int(input ('Digite o segundo valor:'))
+#nota3 = int(input ('Digite o segundo valor:'))
+
+
+#Média = ((nota1 + nota2 + nota3)/ 3)
+
+#print(f'A média é : {Média}')
+
+
+#print(f'------------------------------------------------------------------------')
 
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
 
+
+
+#numero1= int(input ('Digite o primeiro numero:'))
+#numero2 = int(input ('Digite o segundo numero:'))
+
+#adição = (numero1 + numero2)
+#subtração = (numero1 - numero2)
+#multiplicação = (numero1 * numero2)
+#divisão = (numero1 / numero2)
+
+#print("\n")
+
+#print(f'A adição dos dois números é: {adição}')
+#print(f'A subtração dos dois números é: {subtração}')
+#print(f'A multiplicação dos dois números é: {multiplicação}')
+#print(f'A divisão dos dois números é: {divisão}')
+
+#print("\n")
+
+#print(f'------------------------------------------------------------------------')
+
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
 
+
+
+
+
+
+
+
+#print(f'------------------------------------------------------------------------')
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
 
