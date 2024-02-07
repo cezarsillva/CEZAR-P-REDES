@@ -207,26 +207,58 @@ Exercícios sobre os comandos básicos em Python
 #    e imprima o perímetro (base + altura) e a área (base * altura).
 
 
-base= float(input ('Digite o valor da base:'))
-altura = float(input ('Digite o valor da altura:'))
+#base= float(input ('Digite o valor da base:'))
+#altura = float(input ('Digite o valor da altura:'))
 
-perímetro = 2 * (base + altura)
-área = (base * altura)
+#perímetro = 2 * (base + altura)
+#área = (base * altura)
 
-print(f'O perímetro do retangualo é: {perímetro}')
-print(f'A área do retangualo é: {área}')
+#print(f'O perímetro do retangualo é: {perímetro}')
+#print(f'A área do retangualo é: {área}')
+
+
+#print(f'------------------------------------------------------------------------')
+
+#15. Faça um programa que leia o valor de um produto, o percentual
+#    do desconto desejado e imprima o valor do desconto e o valor
+#    do produto subtraindo o desconto.
+
+
+#valorproduto = int(input ('Digite o valor do produto:'))
+#percentual = int(input ('Digite o valor percentual de desconto desejado:'))
+
+
+#desconto = (valorproduto * percentual / 100 )
+
+#novopreco = valorproduto - (valorproduto * percentual / 100 )
+
+#print(f'O valor do desconto é : {desconto}.')
+
+#print(f'O valor do produto subtraindo o desconto é : {novopreco}.')
 
 
 
 #print(f'------------------------------------------------------------------------')
-#15. Faça um programa que leia o valor de um produto, o percentual
-#    do desconto desejado e imprima o valor do desconto e o valor
-#    do produto subtraindo o desconto.
 
 #16. Faça um programa que calcule o reajuste do salário de um
 #    funcionário. Para isso, o programa deverá ler o salário atual
 #    do funcionário e ler o percentual de reajuste. Ao final imprimir
 #    o valor do novo salário.
+
+#Salario = float(input ('Digite o valor atual do salário:'))
+#porcentagem = float(input ('Digite o valor percentual a ser acrescentado:'))
+
+
+#novosalario = Salario + (Salario * porcentagem / 100 )
+
+#print("\n")
+
+#print(f'O valor do salario com {porcentagem} % de aumento é : R$ {novosalario}.')
+
+#print("\n")
+
+
+#print(f'------------------------------------------------------------------------')
 
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
