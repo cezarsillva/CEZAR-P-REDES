@@ -7,6 +7,8 @@
 Exercícios sobre os comandos básicos em Python
 '''
 
+#print(f'------------------------------------------------------------------------') 
+
 #1. Faça um programa que imprima o seu nome.
 
 #print(f'exercicios 1') 
@@ -15,6 +17,7 @@ Exercícios sobre os comandos básicos em Python
 #nome = input ('Digite seu nome: ')
 #print(f'Olá {nome}. Seja bem vindo(a)!')
 
+#print(f'------------------------------------------------------------------------') 
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
 
@@ -27,6 +30,7 @@ Exercícios sobre os comandos básicos em Python
 #print(f'O valor do produto é : {produto}')
 
 
+#print(f'------------------------------------------------------------------------') 
 
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
@@ -42,7 +46,7 @@ Exercícios sobre os comandos básicos em Python
 
 #print(f'A média é : {Média}')
 
-
+#print(f'------------------------------------------------------------------------') 
 
 #4. Faça um programa que leia e imprima um número inteiro.
 
@@ -51,6 +55,7 @@ Exercícios sobre os comandos básicos em Python
 
 #print(numero)
 
+#print(f'------------------------------------------------------------------------') 
 
 #5. Faça um programa que leia dois números reais e os imprima.
 
@@ -61,7 +66,7 @@ Exercícios sobre os comandos básicos em Python
 
 #print(f'O primeiro número é: {numero1} O segundo número é: {numero2}')
 
-
+#print(f'------------------------------------------------------------------------') 
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
@@ -72,6 +77,7 @@ Exercícios sobre os comandos básicos em Python
 #print(f'{numero + 1}')
 #print(f' {numero - 1}')
 
+#print(f'------------------------------------------------------------------------') 
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
@@ -79,20 +85,39 @@ Exercícios sobre os comandos básicos em Python
 
 
 
-nome= str(input ('Digite o nome do cliente: '))
-endereço = str(input ('Digite o endereço do cliente : '))
-telefone = int(input ('Digite o telefone do cliente: '))
+#nome= str(input ('Digite o nome do cliente: '))
+#endereço = str(input ('Digite o endereço do cliente : '))
+#telefone = int(input ('Digite o telefone do cliente: '))
+
+#print("\n")
+
+#print(f'O nome do cliente é : {nome}\n')
+
+#print(f'O endereço do cliente é : {endereço}\n')
+
+#print(f'O telefone do cliente é : {telefone}\n')
 
 
-print(f'O nome do cliente é : {nome}')
-print(f'O endereço do cliente é : {endereço}')
-print(f'O telefone do cliente é : {telefone}')
-
-
+#print(f'------------------------------------------------------------------------') 
 
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
+
+
+numero1= int(input ('Digite o primeiro numero:'))
+numero2 = int(input ('Digite o segundo numero:'))
+
+
+print(f'O primeiro número é: {numero1} O segundo número é: {numero2}')
+
+
+
+
+
+
+
+#print(f'------------------------------------------------------------------------') 
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 
