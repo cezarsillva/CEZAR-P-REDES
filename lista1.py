@@ -105,22 +105,25 @@ Exercícios sobre os comandos básicos em Python
 #   subtração deles.
 
 
-numero1= int(input ('Digite o primeiro numero:'))
-numero2 = int(input ('Digite o segundo numero:'))
+#numero1= int(input ('Digite o primeiro numero:'))
+#numero2 = int(input ('Digite o segundo numero:'))
 
+#subtração = (numero1 - numero2)
 
-print(f'O primeiro número é: {numero1} O segundo número é: {numero2}')
-
-
-
-
-
+#print(f'A subtração dos dois números são: {subtração}')
 
 
 #print(f'------------------------------------------------------------------------') 
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 
+numero = float(input('Digite um número: '))
+
+fração = numero * (1/4)
+
+print(f'A quarta parte do numero {numero} é : {fração}')
+
+#print(f'------------------------------------------------------------------------')
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
