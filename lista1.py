@@ -266,6 +266,16 @@ Exercícios sobre os comandos básicos em Python
 #    imprimir o resultado da conversão.
 #    F = (9 x C + 160) / 5
 
+
+#centígrados = float(input ('Digite o valor da temperatura em graus centígrados:'))
+
+#Fahrenheit = 32 + (9/5) * centígrados
+
+#print(f'A temperatura em graus centígrados {centígrados}° transformado em Fahrenheit é {Fahrenheit}°.')
+
+
+#print(f'------------------------------------------------------------------------')
+
 #18. Faça um programa que calcule a quantidade de litros de combustível
 #    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
 #    12 km por litro de combustível. O programa deverá ler o tempo
@@ -279,12 +289,38 @@ Exercícios sobre os comandos básicos em Python
 #    Ao final, o programa deverá imprimir a distância percorrida e a
 #    quantidade de litros consumidos na viagem.
 
+
+#tempo = float(input ('Digite o tempo gasto na viagem em horas:'))
+#velocidademedia = float(input ('Digite a velocidade média usada durante a viagem em km/h:'))
+
+#Distancia = (tempo * velocidademedia)
+
+#combustiveltotal =  (Distancia /  12 )
+
+#print(f'A distancia percorrida é : {Distancia} km')
+#print(f'A quantidade de litros consumidos na viagem é: {combustiveltotal}Litros')
+
+
+
+#print(f'------------------------------------------------------------------------')
+
 #19. Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
 #    taxa periódica de juros e o período de atraso. Ao final, o
 #    programa deve imprimir o valor da prestação atrasada, o período
 #    de atraso, os juros que serão cobrados pelo período de atraso, o
 #    valor da prestação acrescido dos juros. Considere juros simples.
+
+
+
+
+
+
+
+
+
+
+
 
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
