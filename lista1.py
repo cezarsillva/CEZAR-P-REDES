@@ -312,21 +312,42 @@ Exercícios sobre os comandos básicos em Python
 #    valor da prestação acrescido dos juros. Considere juros simples.
 
 
-valor = int(input ('Digite o valor da prestação:'))
-taxa = int(input ('Digite o valor da taxa:'))
-tempo = int(input ('Digite o tempo atrasado em dias:'))
+#valor = int(input ('Digite o valor da prestação:'))
+#taxa = int(input ('Digite o valor da taxa:'))
+#tempo = int(input ('Digite o tempo atrasado em dias:'))
 
-juros = (valor * taxa * tempo)
-novovalor = (valor + Juros)
+#juros = (valor * taxa * tempo)
+#novovalor = (valor + juros)
 
-print(f'O valor da prestação atrasada é : {valor} ')
-print(f'O período de atraso é : {tempo} ')
-print(f'O valor da prestação acrescido dos juros é : {novovalor} ')
-print(f'Os juros que serão cobrados pelo período de atraso é : {Juros} ')
+#print("\n")
+
+#print(f'O valor da prestação atrasada é : {valor} ')
 
 
+#print(f'O período de atraso é : {tempo} ')
+
+
+#print(f'O valor da prestação acrescido dos juros é : {novovalor} ')
+
+
+#print(f'Os juros que serão cobrados pelo período de atraso é : {juros} ')
+
+#print("\n")
 
 #print(f'------------------------------------------------------------------------')
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
+
+
+
+dolar = float(input("Informe a quantidade de dólar para conversão: U$$ "))
+cotacao = float(input ("Informe o valor da cotação do dólar: R$ "))
+
+conversao = dolar*cotacao
+
+print('A quantidade de dólar convertido em real é: R$',conversao)
+
+
+
+#print(f'------------------------------------------------------------------------')
