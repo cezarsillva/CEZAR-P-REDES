@@ -59,3 +59,15 @@
 
 #print(f'------------------------------------------------------------------------')
 
+
+
+
+#print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
+
+ #print(f'\n{nome}\n{telefone}\n{endereco}') modelo para quebrar linha.
+
+ #print(f'{num1} / {num2} = {round((num1/num2),1)}')
+
+ #print(f'Preço final do produto: R$ {round(preco_final,2)}')
+
+ 
