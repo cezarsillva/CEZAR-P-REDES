@@ -341,12 +341,12 @@ Exercícios sobre os comandos básicos em Python
 
 
 
-dolar = float(input("Informe a quantidade de dólar para conversão: U$$ "))
-cotacao = float(input ("Informe o valor da cotação do dólar: R$ "))
+#dolar = float(input("Informe a quantidade de dólar para conversão: U$$ "))
+#cotacao = float(input ("Informe o valor da cotação do dólar: R$ "))
 
-conversao = dolar*cotacao
+#conversao = dolar*cotacao
 
-print('A quantidade de dólar convertido em real é: R$',conversao)
+#print('A quantidade de dólar convertido em real é: R$',conversao)
 
 
 
