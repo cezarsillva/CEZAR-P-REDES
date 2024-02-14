@@ -2,33 +2,33 @@
 Exercícios sobre os comandos de condição em python
 '''
 
-print(f'===========================================================================') 
+#print(f'===========================================================================') 
 
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
 
-print('\n')
+#print('\n')
 
-valor1 = int(input ('Digite o primeiro valor: '))
-valor2 = int(input ('Digite o segundo valor: '))
+#valor1 = int(input ('Digite o primeiro valor: '))
+#valor2 = int(input ('Digite o segundo valor: '))
 
-print('\n')
+#print('\n')
 
-soma = valor1 + valor2
+#soma = valor1 + valor2
 
-if soma > 10:
+#if soma > 10:
 
 
- print(f'A soma dos dois números é maior que 10 sendo ele: {soma}')
+#print(f'A soma dos dois números é maior que 10 sendo ele: {soma}')
 
-else:
+#else:
 
- print(f'Seu BURRO digite os números para que a soma seja maior que 10!!!')
+#print(f'Seu BURRO digite os números para que a soma seja maior que 10!!!')
 
-print('\n')
+#print('\n')
 
-print(f'===========================================================================') 
+#print(f'===========================================================================') 
 
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
@@ -36,22 +36,44 @@ print(f'========================================================================
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
 
+#print('\n')
+
+#valor1 = int(input ('Digite o primeiro valor: '))
+#valor2 = int(input ('Digite o segundo valor: '))
+
+#print('\n')
+
+#soma = valor1 + valor2
+
+#if soma > 20:
 
 
+#print(f'A soma dos dois números é maior que 20 então soma - se com 8 sendo que o resultado é: {soma + 8}')
 
+#else:
 
+#print(f'A soma dos dois números é menor ou igual a 20 então subtrae - se com 5 sendo que o resultado é: {soma - 5}')
 
+#print('\n')
 
-
-
-
-
-
-
-
+#print(f'===========================================================================') 
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+
+
+
+
+
+
+
+
+
+
+
+
+
+#print(f'===========================================================================')
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
