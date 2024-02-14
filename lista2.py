@@ -1,14 +1,54 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
-       
+
+print(f'===========================================================================') 
+
+
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+
+print('\n')
+
+valor1 = int(input ('Digite o primeiro valor: '))
+valor2 = int(input ('Digite o segundo valor: '))
+
+print('\n')
+
+soma = valor1 + valor2
+
+if soma > 10:
+
+
+ print(f'A soma dos dois números é maior que 10 sendo ele: {soma}')
+
+else:
+
+ print(f'Seu BURRO digite os números para que a soma seja maior que 10!!!')
+
+print('\n')
+
+print(f'===========================================================================') 
+
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
