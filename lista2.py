@@ -8,25 +8,26 @@ Exercícios sobre os comandos de condição em python
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
 
-#print('\n')
+print('\n')
 
-#valor1 = int(input ('Digite o primeiro valor: '))
-#valor2 = int(input ('Digite o segundo valor: '))
+valor1 = int(input ('Digite o primeiro valor: '))
+valor2 = int(input ('Digite o segundo valor: '))
 
-#print('\n')
+print('\n')
 
-#soma = valor1 + valor2
+soma = valor1 + valor2
 
-#if soma > 10:
+if soma > 10:
 
 
-#print(f'A soma dos dois números é maior que 10 sendo ele: {soma}')
+print(f'A soma dos dois números é maior que 10 sendo ele: {soma}')
 
-#else:
+else:
 
-#print(f'Seu BURRO digite os números para que a soma seja maior que 10!!!')
+print(f'Seu BURRO digite os números para que a soma seja maior que 10!!!')
 
-#print('\n')
+print('\n')
+
 
 #print(f'===========================================================================') 
 

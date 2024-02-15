@@ -21,7 +21,6 @@ Exercícios sobre os comandos básicos em Python
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
 
-
 #valor1 = int(input ('Digite o primeiro valor:'))
 #valor2 = int(input ('Digite o segundo valor:'))
 
@@ -260,6 +259,8 @@ Exercícios sobre os comandos básicos em Python
 
 #print(f'------------------------------------------------------------------------')
 
+#def q17():
+
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
 #    com base na fórmula a seguir. Após calcular o programa deve
@@ -276,6 +277,8 @@ Exercícios sobre os comandos básicos em Python
 
 #print(f'------------------------------------------------------------------------')
 
+
+
 #18. Faça um programa que calcule a quantidade de litros de combustível
 #    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
 #    12 km por litro de combustível. O programa deverá ler o tempo
@@ -290,10 +293,10 @@ Exercícios sobre os comandos básicos em Python
 #    quantidade de litros consumidos na viagem.
 
 
-#tempo = float(input ('Digite o tempo gasto na viagem em horas:'))
-#velocidademedia = float(input ('Digite a velocidade média usada durante a viagem em km/h:'))
+#tempo = int(input ('Digite o tempo gasto na viagem em minutos:'))
+#velocidademedia = int(input ('Digite a velocidade média usada durante a viagem em km/h:'))
 
-#Distancia = (tempo * velocidademedia)
+#Distancia = (tempo/60 * velocidademedia)
 
 #combustiveltotal =  (Distancia /  12 )
 
@@ -304,6 +307,7 @@ Exercícios sobre os comandos básicos em Python
 
 #print(f'------------------------------------------------------------------------')
 
+
 #19. Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
 #    taxa periódica de juros e o período de atraso. Ao final, o
@@ -312,11 +316,11 @@ Exercícios sobre os comandos básicos em Python
 #    valor da prestação acrescido dos juros. Considere juros simples.
 
 
-#valor = int(input ('Digite o valor da prestação:'))
-#taxa = int(input ('Digite o valor da taxa:'))
-#tempo = int(input ('Digite o tempo atrasado em dias:'))
+#valor = float(input ('Digite o valor da prestação:'))
+#taxa = float(input ('Digite o valor da taxa:'))
+#tempo = float(input ('Digite o tempo atrasado em dias:'))
 
-#juros = (valor * taxa * tempo)
+#juros = (valor * taxa/100 * tempo)
 #novovalor = (valor + juros)
 
 #print("\n")
@@ -335,6 +339,7 @@ Exercícios sobre os comandos básicos em Python
 #print("\n")
 
 #print(f'------------------------------------------------------------------------')
+
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
@@ -351,3 +356,8 @@ Exercícios sobre os comandos básicos em Python
 
 
 #print(f'------------------------------------------------------------------------')
+
+
+#Escolha a questão a ser executadada:
+
+#def q17():
