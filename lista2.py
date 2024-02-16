@@ -99,21 +99,22 @@ Exercícios sobre os comandos de condição em python
 
 
 
-valor = int(input ('Digite o valor: '))
+#valor = int(input ('Digite o valor: '))
 
 
-if valor % 3 == 0 and valor % 7 == 0 :
+#if valor % 3 == 0 and valor % 7 == 0 :
 
 
-    print(f'É divisivel por 3 e 7.')
+    #print(f'É divisivel por 3 e 7.')
  
 
-else:
+#else:
 
-    print(f'Não é divisivel por 3 e 7.')
+    #print(f'Não é divisivel por 3 e 7.')
 
 
 
+#print(f'===========================================================================')
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
@@ -121,15 +122,20 @@ else:
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
 
 
-salariobruto = int(input ('Digite o salário bruto: '))
-valorprestação = int(input ('Digite o valor da prestação: '))
+#salariobruto = float(input ('Digite o salário bruto: '))
+#valorprestação = float(input ('Digite o valor da prestação: '))
 
 
+#if valorprestação > salariobruto * 0.3:
+
+    #print(f'Empréstimo não autorizado.')
+ 
+#else:
+
+    #print(f'Empréstimo autorizado.')
 
 
-
-
-
+#print(f'===========================================================================')
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
@@ -137,10 +143,49 @@ valorprestação = int(input ('Digite o valor da prestação: '))
 
 
 
+#num = int(input ('Digite o número: '))
+
+
+#if 20 <= num <= 50:
+
+
+    #print(f'Está entre o intevalo desejado.')
+
+
+#else:
+
+    #print(f'Não está  entre o intevalo desejado.')
+
+
+
+#print(f'===========================================================================')
+
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
 
 
+#num = int(input ('Digite o número: '))
+
+
+#if num > 20:
+
+
+    #print(f'Maior do que 20.')
+
+
+
+#if num == 20:
+
+    #print(f'Igual a 20.')
+
+
+#if num < 20:
+
+    #print(f'Menor do que 20.')
+
+
+
+#print(f'===========================================================================')
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
@@ -148,6 +193,20 @@ valorprestação = int(input ('Digite o valor da prestação: '))
 
 
 
+Ano_nasc = input ('Digite o ano de nascimento: ')
+Ano_atual = input ('Digite o ano atual: ')
+
+if Ano_nasc.isdigit():
+
+    print("O ano de nascimento é um úmero válido!")
+
+else:
+
+    print("O ano de nascimento é um úmero inválido!!")
+
+
+
+#print(f'===========================================================================')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
