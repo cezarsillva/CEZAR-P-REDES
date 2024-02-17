@@ -193,17 +193,18 @@ Exercícios sobre os comandos de condição em python
 
 
 
-Ano_nasc = input ('Digite o ano de nascimento: ')
-Ano_atual = input ('Digite o ano atual: ')
+#Ano_nasc = int(input ('Digite o ano de nascimento: '))
+#Ano_atual = int(input ('Digite o ano atual: '))
 
-if Ano_nasc.isdigit():
+#idade = 0
 
-    print("O ano de nascimento é um úmero válido!")
+#if (Ano_nasc > Ano_atual):
+    #print(f'Ano de nascimento inválido.')
 
-else:
+#elif (Ano_nasc < Ano_atual):
+    #idade = Ano_atual - Ano_nasc
 
-    print("O ano de nascimento é um úmero inválido!!")
-
+#print(f'A idade é {idade} anos.')
 
 
 #print(f'===========================================================================')
@@ -212,24 +213,112 @@ else:
 #crescente.
 
 
+#num1 = int(input ('Digite o primeiro número: '))
+#num2 = int(input ('Digite o segundo número: '))
+#num3 = int(input ('Digite o terceiro número: '))
 
+
+#if num1 < num2 < num3:
+    
+    #print(f' {num1} - {num2} - {num3} ')
+
+#if num1 < num3 < num2:
+    
+    #print(f' {num1} - {num3} - {num2} ')
+
+#if num2 < num1 < num3:
+    
+    #print(f' {num2} - {num1} - {num3} ')
+
+#if num2 < num3 < num1:
+    
+    #print(f' {num2} - {num3} - {num1} ')
+
+#if num3 < num1 < num2:
+    
+    #print(f' {num3} - {num1} - {num2} ')
+
+#if num3 < num2 < num1:
+    
+    #print(f' {num3} - {num2} - {num1} ')
+
+
+#print(f'===========================================================================')
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 
 
 
+#num1 = int(input ('Digite o primeiro número: '))
+#num2 = int(input ('Digite o segundo número: '))
+#num3 = int(input ('Digite o terceiro número: '))
+
+#if num1 > num2 > num3:
+    
+    #print(f' {num1}  ')
+
+#if num1 > num3 > num2:
+    
+    #print(f' {num1} ')
+
+#if num2 > num1 > num3:
+    
+    #print(f' {num2} ')
+
+#if num2 > num3 > num1:
+    
+    #print(f' {num2} ')
+
+#if num3 > num1 > num2:
+    
+    #print(f' {num3} ')
+
+#if num3 > num2 > num1:
+    
+    #print(f' {num3} ')
 
 
 
+#print(f'===========================================================================')
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
-#• Se é menor de idadea
+#• Se é menor de idade
 #• Se é maior de 65 anos
+
+#idade = int(input ('Digite sua idade. '))
+
+#if idade > 18:
+    #print(f' Você é maior de idade. ')
+
+#if idade < 18:
+    #print(f' Você é menor de idade. ')
+
+#if idade >= 65:
+    #print(f' Você já é considerado idoso ')
+
+
+
+#print(f'===========================================================================')
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
