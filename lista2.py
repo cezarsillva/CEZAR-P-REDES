@@ -222,23 +222,23 @@ Exercícios sobre os comandos de condição em python
     
     #print(f' {num1} - {num2} - {num3} ')
 
-#if num1 < num3 < num2:
+#elif num1 < num3 < num2:
     
     #print(f' {num1} - {num3} - {num2} ')
 
-#if num2 < num1 < num3:
+#elif num2 < num1 < num3:
     
     #print(f' {num2} - {num1} - {num3} ')
 
-#if num2 < num3 < num1:
+#elif num2 < num3 < num1:
     
     #print(f' {num2} - {num3} - {num1} ')
 
-#if num3 < num1 < num2:
+#elif num3 < num1 < num2:
     
     #print(f' {num3} - {num1} - {num2} ')
 
-#if num3 < num2 < num1:
+#elif num3 < num2 < num1:
     
     #print(f' {num3} - {num2} - {num1} ')
 
@@ -256,23 +256,23 @@ Exercícios sobre os comandos de condição em python
     
     #print(f' {num1}  ')
 
-#if num1 > num3 > num2:
+#elif num1 > num3 > num2:
     
     #print(f' {num1} ')
 
-#if num2 > num1 > num3:
+#elif num2 > num1 > num3:
     
     #print(f' {num2} ')
 
-#if num2 > num3 > num1:
+#elif num2 > num3 > num1:
     
     #print(f' {num2} ')
 
-#if num3 > num1 > num2:
+#elif num3 > num1 > num2:
     
     #print(f' {num3} ')
 
-#if num3 > num2 > num1:
+#elif num3 > num2 > num1:
     
     #print(f' {num3} ')
 
@@ -289,10 +289,10 @@ Exercícios sobre os comandos de condição em python
 #if idade > 18:
     #print(f' Você é maior de idade. ')
 
-#if idade < 18:
+#elif idade < 18:
     #print(f' Você é menor de idade. ')
 
-#if idade >= 65:
+#elif idade >= 65:
     #print(f' Você já é considerado idoso ')
 
 
@@ -341,15 +341,15 @@ Exercícios sobre os comandos de condição em python
 #if salario <= 600:
     #print(f' Salário isento. ')
 
-#if salario > 600 and salario <= 1200:
+#elif salario > 600 and salario <= 1200:
 
     #print(f' Salário terá um desconto de 20% :{salario*20/100}. ')
 
-#if salario > 1200 and salario < 2000:
+#elif salario > 1200 and salario < 2000:
 
     #print(f' Salário terá um desconto de 25% :{salario*25/100} . ')
 
-#if salario >= 2000:
+#elif salario >= 2000:
 
     #print(f' Salário terá um desconto de 30% :{salario*30/100} . ')
 
@@ -361,17 +361,21 @@ Exercícios sobre os comandos de condição em python
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
 
+#valorproduto = float(input ('Digite o valor do produto em R$: '))
+
+#lucro1 = valorproduto * 45 / 100
+#lucro2 = valorproduto * 30 / 100
+
+#if valorproduto < 20:
+    #print(f'O valor da venda é: {valorproduto + lucro1}')
 
 
-
-
-
-
-
-
+#else:
+    #print(f'O valor da venda é: {valorproduto + lucro2}')
 
 
 #print(f'===========================================================================')
+
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
 #a sua categoria segundo a tabela a seguir:
@@ -381,6 +385,29 @@ Exercícios sobre os comandos de condição em python
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+
+
+#idade = int(input('Digite a idade do atleta: '))
+
+
+#if idade >= 5 and idade <= 7:
+    #print(f'A categoria do atleta é: Infantil A ')
+
+#elif idade >= 8 and idade <= 10:
+    #print(f'A categoria do atleta é: Infantil B ')
+
+
+#elif idade >= 11 and idade <= 13:
+    #print(f'A categoria do atleta é: Juvenil A ')
+
+#elif idade >= 14 and idade <= 17:
+    #print(f'A categoria do atleta é: Juvenil B ')
+
+#elif idade >= 18:
+    #print(f'A categoria do atleta é: Sênior ')
+
+
+#print(f'===========================================================================')
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
@@ -395,9 +422,52 @@ Exercícios sobre os comandos de condição em python
 #Acima de 59 até 65 anos R$250,00
 #Maior que 65 anos R$400,00
 
+
+#nome = str(input('Digite o nome da pessoa: '))
+#idade = int(input('Digite a idade da pessoa: '))
+
+
+#if idade < 10:
+    #print(f'O beneficiário {nome} tem  {idade} anos e deverá pagar R$30,00 de plano. ')
+
+
+#elif idade >= 10 and idade <= 29:
+    #print(f'O beneficiário {nome} tem  {idade} anos e deverá pagar R$60,00 de plano. ')
+
+
+#elif idade >= 29 and idade <= 45:
+    #print(f'O beneficiário {nome} tem  {idade} anos e deverá pagar R$120,00 de plano. ')
+
+
+#elif idade >= 45 and idade <= 59:
+    #print(f'O beneficiário {nome} tem  {idade} anos e deverá pagar R$150,00 de plano. ')
+
+
+#elif idade >= 59 and idade <= 65:
+    #print(f'O beneficiário {nome} tem  {idade} anos e deverá pagar $250,00 de plano. ')
+
+
+#elif idade > 65:
+    #print(f'O beneficiário {nome} tem  {idade} anos e deverá pagar R$400,00 de plano. ')
+
+
+#print(f'===========================================================================')
+
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
+
+
+
+
+
+
+
+
+
+
+
+#print(f'===========================================================================')
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
@@ -407,6 +477,8 @@ Exercícios sobre os comandos de condição em python
 #• Mostrar esses valores em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
+
+#print(f'===========================================================================')
 
 #20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de
 #acordo com o saldo médio no último ano. Faça um programa que leia o saldo médio
