@@ -458,13 +458,60 @@ Exercícios sobre os comandos de condição em python
 #aparecer uma mensagem informando que não existe mês com este número.
 
 
+mês = int(input('Digite um valor entre 1 e 12: '))
 
 
+if (mês == 1):
 
+ print(mês, ' = Janeiro')
 
+elif (mês == 2):
 
+ print(mês, ' = Fevereiro')
 
+elif (mês == 3):
 
+ print(mês, ' = Março')
+
+elif (mês == 4):
+
+ print(mês, ' = Abril')
+
+elif (mês == 5):
+
+ print(mês, ' = Maio')
+
+elif (mês == 6):
+
+ print(mês, ' = Junho')
+
+elif (mês == 7):
+
+ print(mês, ' = Julho')
+
+elif (mês == 8):
+
+ print(mês, ' = Agosto')
+
+elif (mês == 9):
+
+ print(mês, ' = Setembro')
+
+elif (mês == 10):
+
+ print(mês, ' = Outubro')
+
+elif (mês == 11):
+
+ print(mês, ' = Novembro')
+
+elif (mês == 12):
+
+ print(mês, ' = Dezembro')
+
+else:
+
+ print('Digite um número no intervalo solicitado.')
 
 
 #print(f'===========================================================================')
