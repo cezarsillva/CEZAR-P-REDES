@@ -458,60 +458,60 @@ Exercícios sobre os comandos de condição em python
 #aparecer uma mensagem informando que não existe mês com este número.
 
 
-mês = int(input('Digite um valor entre 1 e 12: '))
+#mês = int(input('Digite um valor entre 1 e 12: '))
 
 
-if (mês == 1):
+#if (mês == 1):
 
- print(mês, ' = Janeiro')
+ #print(mês, ' = Janeiro')
 
-elif (mês == 2):
+#elif (mês == 2):
 
- print(mês, ' = Fevereiro')
+ #print(mês, ' = Fevereiro')
 
-elif (mês == 3):
+#elif (mês == 3):
 
- print(mês, ' = Março')
+ #print(mês, ' = Março')
 
-elif (mês == 4):
+#elif (mês == 4):
 
- print(mês, ' = Abril')
+ #print(mês, ' = Abril')
 
-elif (mês == 5):
+#elif (mês == 5):
 
- print(mês, ' = Maio')
+ #print(mês, ' = Maio')
 
-elif (mês == 6):
+#elif (mês == 6):
 
- print(mês, ' = Junho')
+ #print(mês, ' = Junho')
 
-elif (mês == 7):
+#elif (mês == 7):
 
- print(mês, ' = Julho')
+ #print(mês, ' = Julho')
 
-elif (mês == 8):
+#elif (mês == 8):
 
- print(mês, ' = Agosto')
+ #print(mês, ' = Agosto')
 
-elif (mês == 9):
+#elif (mês == 9):
 
- print(mês, ' = Setembro')
+ #print(mês, ' = Setembro')
 
-elif (mês == 10):
+#elif (mês == 10):
 
- print(mês, ' = Outubro')
+ #print(mês, ' = Outubro')
 
-elif (mês == 11):
+#elif (mês == 11):
 
- print(mês, ' = Novembro')
+ #print(mês, ' = Novembro')
 
-elif (mês == 12):
+#elif (mês == 12):
 
- print(mês, ' = Dezembro')
+ #print(mês, ' = Dezembro')
 
-else:
+#else:
 
- print('Digite um número no intervalo solicitado.')
+ #print('Digite um número no intervalo solicitado.')
 
 
 #print(f'===========================================================================')
@@ -524,6 +524,53 @@ else:
 #• Mostrar esses valores em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
+
+
+
+#jogador1= float(input ('Digite a nota do primeiro jogador: '))
+#jogador2= float(input ('Digite a nota do segundo jogador: '))
+#jogador3= float(input ('Digite a nota do primeiro jogador: '))
+
+
+#soma = jogador1 + jogador2 + jogador3
+
+
+#if soma > 100:
+
+    #print(f'Soma maior que 100 então sua média é: {soma / 3}')
+
+
+#else:
+    #print(f'Equipe Desclassificada.')
+
+
+
+#if jogador1 > jogador2 > jogador3:
+    
+    #print(f' {jogador1} - {jogador2} - {jogador3} ')
+
+#elif jogador1 > jogador3 > jogador2:
+    
+    #print(f' {jogador1} - {jogador3} - {jogador2} ')
+
+#elif jogador2 > jogador1 > jogador3:
+    
+    #print(f' {jogador2} - {jogador1} - {jogador3} ')
+
+#elif jogador2 > jogador3 > jogador1:
+    
+    #print(f' {jogador2} - {jogador3} - {jogador1} ')
+
+#elif jogador3 > jogador1 > jogador2:
+    
+    #print(f' {jogador3} - {jogador1} - {jogador2} ')
+
+#elif jogador3 > jogador2 > jogador1:
+    
+    #print(f' {jogador3} - {jogador2} - {jogador1} ')
+
+
+
 
 #print(f'===========================================================================')
 
@@ -538,6 +585,34 @@ else:
 #de 1001 a 3000 40% do valor do saldo médio
 #acima de 3001 50% do valor do saldo médio
 
+
+#saldomedio = float(input ('Digite o saldo médio para verificar o crédito: '))
+
+
+#credito = saldomedio * 2 / 100
+
+#print(f'O valor do crédito é: {credito}')
+
+
+#if saldomedio <= 500:
+    #print(f'O cliente não conseguiu nenhum crédito.')
+
+#elif saldomedio > 501 and saldomedio < 1000:
+
+    #print(f'O cliente conseguiu 30% de crédito.')
+
+#elif saldomedio > 1001 and saldomedio < 3000:
+    
+    #print(f'O cliente conseguiu 40% de crédito.')
+
+
+#else:
+    
+    #print(f'O cliente conseguiu 50% de crédito.')
+
+
+#print(f'===========================================================================')
+
 #21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do
 #livro que será emprestado, o tipo de usuário (professor ou aluno) e possa
 #imprimir um recibo conforme mostrado a seguir. Considerar que o professor
@@ -546,10 +621,45 @@ else:
 #• Tipo de usuário:
 #• Total de dias:
 
+
+nome = str(input("Digite o nome do Usuário: "))
+nomelivro = str(input("Digite o nome do livro: "))
+usuario = int(input('Digite o usuário para acesso Professor(1) ou Aluno(2). '))
+
+if usuario == 1 :
+
+    print(f'O usuário é professor.\n O nome do livro é: {nomelivro}. \n Total de dias de emprestimo é 10.')
+
+else:
+    
+    print(f'\nO usuário é Aluno. \nO nome do livro é: {nomelivro}.\nTotal de dias de emprestimo é 3.')
+
+
+
+#print(f'===========================================================================')
+
 #22. Construa um programa que leia o percurso em quilômetros, o tipo do carro e
 #informe o consumo estimado de combustível, sabendo-se que um carro tipo A faz
 #12 km com um litro de gasolina, um tipo B faz 9 km e o tipo C 8 km por litro.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#print(f'===========================================================================')
 #23. Crie um programa que informe a quantidade total de calorias de uma refeição
 #a partir da escolha do usuário que deverá informar o prato, a sobremesa, e
 #bebida conforme a tabela a seguir.
