@@ -655,10 +655,6 @@ else:
 
 
 
-
-
-
-
 #print(f'===========================================================================')
 #23. Crie um programa que informe a quantidade total de calorias de uma refeição
 #a partir da escolha do usuário que deverá informar o prato, a sobremesa, e
@@ -685,3 +681,49 @@ else:
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Fora da da lista:
+
+
+#18. Faça um programa que calcule a quantidade de litros de combustível
+#    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
+#    12 km por litro de combustível. O programa deverá ler o tempo
+#    decorrido na viagem e a velocidade média e aplicar as fórmulas:
+#    D = T x V       L = D / 12
+#    Em que:
+#    • D = Distância percorrida em horas
+#    • T = Tempo
+#    • V = Velocidade média
+#    • L = Litros de combustível consumidos
+#    Ao final, o programa deverá imprimir a distância percorrida e a
+#    quantidade de litros consumidos na viagem.
+
+
+#tempo = int(input ('Digite o tempo gasto na viagem em minutos:'))
+#velocidademedia = int(input ('Digite a velocidade média usada durante a viagem em km/h:'))
+
+#Distancia = (tempo/60 * velocidademedia)
+
+#combustiveltotal =  (Distancia /  12 )
+
+#print(f'A distancia percorrida é : {Distancia} km')
+#print(f'A quantidade de litros consumidos na viagem é: {combustiveltotal}Litros')
