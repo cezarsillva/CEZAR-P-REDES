@@ -679,23 +679,27 @@ sobremesa = str(input("Digite a sobremesa de sua preferência: "))
 bebida = str(input("Digite a bebida de sua preferência: "))
 
 vegetariano = 180
-peixe = 230
-frango = 250
-carne = 350
+#peixe = 230
+#frango = 250
+#carne = 350
 
 
 abacaxi = 75
-sorvetediet = 110
-moussediet = 170
-moussechocolate = 200
+#sorvetediet = 110
+#moussediet = 170
+#moussechocolate = 200
 
 
 cha = 20
-sucolaranja = 70
-sucomelão = 100
-refrigerantediet = 65
+#sucolaranja = 70
+#sucomelão = 100
+#refrigerantediet = 65
 
 
+totalcalorias = vegetariano + abacaxi + cha
+
+if prato == vegetariano, abacaxi, cha:
+    print(f'O prato escolhido tem {total} calorias.')
 
 
 
