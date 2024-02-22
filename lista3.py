@@ -1,4 +1,7 @@
 '''
+
+https://github.com/ifmt-cba/lp20241
+
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
