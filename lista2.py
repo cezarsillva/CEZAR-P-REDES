@@ -547,7 +547,7 @@ Exercícios sobre os comandos de condição em python
 
 #if jogador1 > jogador2 > jogador3:
     
-    #print(f' {jogador1} - {jogador2} - {jogador3} ')
+   # print(f' {jogador1} - {jogador2} - {jogador3} ')
 
 #elif jogador1 > jogador3 > jogador2:
     
@@ -667,39 +667,114 @@ Exercícios sobre os comandos de condição em python
 #23. Crie um programa que informe a quantidade total de calorias de uma refeição
 #a partir da escolha do usuário que deverá informar o prato, a sobremesa, e
 #bebida conforme a tabela a seguir.
-#Prato  Sobremesa   Bebida
-#Vegetariano 180cal Abacaxi 75cal   Chá 20cal
-#Peixe 230cal   Sorvete diet 110cal Suco de laranja 70cal
-#Frango 250cal  Mousse diet 170cal  Suco de melão 100cal
-#Carne 350cal   Mousse chocolate 200cal Refrigerante diet 65cal
+
+#Prato                  Sobremesa                   Bebida
+#1 - Vegetariano 180cal     Abacaxi 75cal               Chá 20cal
+#2 - Peixe 230cal           Sorvete diet 110cal         Suco de laranja 70cal
+#3 - Frango 250cal          Mousse diet 170cal          Suco de melão 100cal
+#4 - Carne 350cal           Mousse chocolate 200cal     Refrigerante diet 65cal
 
 
-prato = str(input("Digite o prato de sua preferência: "))
-sobremesa = str(input("Digite a sobremesa de sua preferência: "))
-bebida = str(input("Digite a bebida de sua preferência: "))
+# prato = str(input("Digite o prato de sua preferência: "))
+# caloriasp =int(input("Digite a quantidade de calorias do prato: "))
+# sobremesa = str(input("Digite a sobremesa de sua preferência: "))
+# caloriass =int(input("Digite a quantidade de calorias da sobremesa: "))
+# bebida = str(input("Digite a bebida de sua preferência: "))
+# caloriasc =int(input("Digite a quantidade de calorias da bebida: "))
 
-vegetariano = 180
-#peixe = 230
-#frango = 250
-#carne = 350
+menu_prato = """
 
+Vegetariano - 1
+Peixe - 2
+Frango - 3
+Carne - 4
 
-abacaxi = 75
-#sorvetediet = 110
-#moussediet = 170
-#moussechocolate = 200
-
-
-cha = 20
-#sucolaranja = 70
-#sucomelão = 100
-#refrigerantediet = 65
+"""
+print(menu_prato)
 
 
-totalcalorias = vegetariano + abacaxi + cha
+prato = int(input("Digite a opção escolhida: "))
 
-if prato == vegetariano, abacaxi, cha:
-    print(f'O prato escolhido tem {total} calorias.')
+
+if prato == 1:
+    print(f'O prato 1 tem 180 calorias: ')
+
+
+elif prato == 2:
+   print(f'O prato 2 tem 230 calorias: ')
+
+
+elif prato == 3:
+    print(f'O prato 3 tem 250 calorias: ')
+
+
+elif prato == 4:
+    print(f'O prato 4 tem 350 calorias: ')
+
+
+
+menu_sobremesa = """
+
+Abacaxi - 1
+Sorvete diet - 2
+Mousse diet - 3
+ Mousse chocolate - 4
+
+"""
+print(menu_sobremesa)
+
+sobremesa = int(input("Digite a opção escolhida: "))
+
+
+if sobremesa == 1:
+    print(f'A sobremesa 1 tem 75 calorias: ')
+
+
+elif sobremesa == 2:
+   print(f'A sobremesa 2 tem 110 calorias: ')
+
+
+elif sobremesa == 3:
+    print(f'A sobremesa 3 tem 170 calorias: ')
+
+
+
+elif sobremesa == 4:
+    print(f'A sobremesa 4 tem 200 calorias: ')
+
+
+
+
+
+menu_bebida = """
+
+Abacaxi - 1
+Sorvete diet - 2
+Mousse diet - 3
+ Mousse chocolate - 4
+
+"""
+print(menu_bebida)
+
+bebida = int(input("Digite a opção escolhida: "))
+
+
+if bebida == 1:
+    print(f'A bebida 1 tem 20 calorias: ')
+
+
+elif bebida == 2:
+   print(f'A bebida 2 tem 70 calorias: ')
+
+
+elif bebida == 3:
+    print(f'A bebida 3 tem 100 calorias: ')
+
+
+
+elif bebida == 4:
+    print(f'A bebida 4 tem 65 calorias: ')
+
 
 
 
@@ -710,6 +785,8 @@ if prato == vegetariano, abacaxi, cha:
 #carro deve ser renovado é determinado pelo último número da placa do mesmo,
 #faça um programa que, a partir da leitura da placa do carro, informe o mês
 #em que o emplacamento deve ser renovado.
+
+
 
 
 
