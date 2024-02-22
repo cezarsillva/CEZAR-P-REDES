@@ -676,119 +676,119 @@ Exercícios sobre os comandos de condição em python
 #3 - Frango 250cal          Mousse diet 170cal          Suco de melão 100cal
 #4 - Carne 350cal           Mousse chocolate 200cal     Refrigerante diet 65cal
 
-Modelo Exercício com menu
+#Modelo Exercício com menu
 
-print('\n')
-print(f'Escolha o prato de sua preferencia no menu abaixo:')
-menu_prato = """
-Vegetariano - 1
-Peixe - 2
-Frango - 3
-Carne - 4
-"""
-print(menu_prato)
+#print('\n')
+#print(f'Escolha o prato de sua preferencia no menu abaixo:')
+#menu_prato = """
+#Vegetariano - 1
+#Peixe - 2
+#Frango - 3
+#Carne - 4
+#"""
+#print(menu_prato)
 
-prato = int(input("Digite a opção escolhida: "))
-print('\n')
+#prato = int(input("Digite a opção escolhida: "))
+#print('\n')
 
-if prato == 1:
-    print(f'O prato Vegetariano tem 180 calorias: ')
+#if prato == 1:
+    #print(f'O prato Vegetariano tem 180 calorias: ')
 
-elif prato == 2:
-   print(f'O prato Peixe tem 230 calorias: ')
+#elif prato == 2:
+   #print(f'O prato Peixe tem 230 calorias: ')
 
-elif prato == 3:
-    print(f'O prato Frango tem 250 calorias: ')
+#elif prato == 3:
+    #print(f'O prato Frango tem 250 calorias: ')
 
-elif prato == 4:
-    print(f'O prato Carne tem 350 calorias: ')
+#elif prato == 4:
+    #print(f'O prato Carne tem 350 calorias: ')
 
-print('\n')
-print(f'Escolha a sobremesa de sua preferencia no menu abaixo:')
-menu_sobremesa = """
-Abacaxi - 1
-Sorvete diet - 2
-Mousse diet - 3
- Mousse chocolate - 4
-"""
-print(menu_sobremesa)
+#print('\n')
+#print(f'Escolha a sobremesa de sua preferencia no menu abaixo:')
+#menu_sobremesa = """
+#Abacaxi - 1
+#Sorvete diet - 2
+#Mousse diet - 3
+#Mousse chocolate - 4
+#"""
+#print(menu_sobremesa)
 
-sobremesa = int(input("Digite a opção escolhida: "))
-print('\n')
-if sobremesa == 1:
-    print(f'A sobremesa Abacaxi tem 75 calorias: ')
-
-
-elif sobremesa == 2:
-   print(f'A sobremesa Sorvete diet tem 110 calorias: ')
+#sobremesa = int(input("Digite a opção escolhida: "))
+#print('\n')
+#if sobremesa == 1:
+    #print(f'A sobremesa Abacaxi tem 75 calorias: ')
 
 
-elif sobremesa == 3:
-    print(f'A sobremesa Mousse diet tem 170 calorias: ')
+#elif sobremesa == 2:
+   #print(f'A sobremesa Sorvete diet tem 110 calorias: ')
 
 
-
-elif sobremesa == 4:
-    print(f'A sobremesa Mousse chocolate tem 200 calorias: ')
-
-
-print('\n')
-print(f'Escolha a bebida de sua preferencia no menu abaixo:')
-menu_bebida = """
-Abacaxi - 1
-Sorvete diet - 2
-Mousse diet - 3
- Mousse chocolate - 4
-"""
-print(menu_bebida)
-
-bebida = int(input("Digite a opção escolhida: "))
-print('\n')
-
-if bebida == 1:
-    print(f'A bebida Chá tem 20 calorias: ')
-
-
-elif bebida == 2:
-   print(f'A bebida Suco de Laranja tem 70 calorias: ')
-
-
-elif bebida == 3:
-    print(f'A bebida Suco de melão tem 100 calorias: ')
+#elif sobremesa == 3:
+    #print(f'A sobremesa Mousse diet tem 170 calorias: ')
 
 
 
-elif bebida == 4:
-    print(f'A bebida Refrigerante diet tem 65 calorias: ')
-
-print('\n')
+#elif sobremesa == 4:
+    #print(f'A sobremesa Mousse chocolate tem 200 calorias: ')
 
 
+#print('\n')
+#print(f'Escolha a bebida de sua preferencia no menu abaixo:')
+#menu_bebida = """
+#Abacaxi - 1
+#Sorvete diet - 2
+#Mousse diet - 3
+#Mousse chocolate - 4
+#"""
+#print(menu_bebida)
 
-print(f'--------------------------------------------------------------------------------------------')
-print(f'Exemplo Professor em Sala.')
-print(f'--------------------------------------------------------------------------------------------')
+#bebida = int(input("Digite a opção escolhida: "))
+#print('\n')
+
+#if bebida == 1:
+    #print(f'A bebida Chá tem 20 calorias: ')
 
 
-prato = input('Prato: ').upper().strip()
-sobremesa = input('Sobremesa: ').upper().strip()
-bebida = input('Bebida: ').upper().strip()
+#elif bebida == 2:
+   #print(f'A bebida Suco de Laranja tem 70 calorias: ')
 
-total = 0
-total += 180 if prato == 'VEGETARIANO' else 0
-total += 230 if prato == 'PEIXE' else 0
-total += 250 if prato == 'FRANGO' else 0
-total += 350 if prato == 'CARNE' else 0
-total += 75 if sobremesa == 'ABACAXI' else 0
-total += 110 if sobremesa == 'SOVERTE DIET' else 0
-total += 170 if sobremesa == 'MOUSSE DIET' else 0
-total += 200 if sobremesa == 'MOUSSE CHOCOLATE' else 0
-total += 20 if bebida == 'CHA' else 0
-total += 70 if bebida == 'SUCO DE LARANJA' else 0
-total += 100 if bebida == 'SUCO DE MELAO' else 0
-total += 65 if bebida == 'REFRIGERANTE' else 0    
 
-print(f'Total de calorias: {total}')
+#elif bebida == 3:
+    #print(f'A bebida Suco de melão tem 100 calorias: ')
+
+
+
+#elif bebida == 4:
+    #print(f'A bebida Refrigerante diet tem 65 calorias: ')
+
+#print('\n')
+
+
+
+#print(f'--------------------------------------------------------------------------------------------')
+#print(f'Exemplo Professor em Sala.')
+#print(f'--------------------------------------------------------------------------------------------')
+
+
+#prato = input('Prato: ').upper().strip()
+#sobremesa = input('Sobremesa: ').upper().strip()
+#bebida = input('Bebida: ').upper().strip()
+
+#total = 0
+#total += 180 if prato == 'VEGETARIANO' else 0
+#total += 230 if prato == 'PEIXE' else 0
+#total += 250 if prato == 'FRANGO' else 0
+#total += 350 if prato == 'CARNE' else 0
+#total += 75 if sobremesa == 'ABACAXI' else 0
+#total += 110 if sobremesa == 'SOVERTE DIET' else 0
+#total += 170 if sobremesa == 'MOUSSE DIET' else 0
+#total += 200 if sobremesa == 'MOUSSE CHOCOLATE' else 0
+#total += 20 if bebida == 'CHA' else 0
+#total += 70 if bebida == 'SUCO DE LARANJA' else 0
+#total += 100 if bebida == 'SUCO DE MELAO' else 0
+#total += 65 if bebida == 'REFRIGERANTE' else 0    
+
+#print(f'Total de calorias: {total}')
 
 
 #print(f'===========================================================================')
@@ -799,8 +799,10 @@ print(f'Total de calorias: {total}')
 #faça um programa que, a partir da leitura da placa do carro, informe o mês
 #em que o emplacamento deve ser renovado.
 
-
-
+placa = input('Placa do veículo: ').upper().strip()
+    mes = placa[len(placa)-1]
+    if mes == '1':
+        printf('JANEIRO')
 
 
 
