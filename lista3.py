@@ -4,12 +4,41 @@ https://github.com/ifmt-cba/lp20241
 
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
+#print('-------------------------------------------------------------------------------------')
 
 #1.Faça um programa que imprima todos os números de 1 até 100.
 
+#x = 1
+#while x <= 100:
+    #print(x)
+    #x = x + 1
+
+
+#print('-------------------------------------------------------------------------------------')
+
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
 
+
+#x = 100
+#while x >= 1:
+    #print(x)
+    #x = x - 1
+
+
+#print('-------------------------------------------------------------------------------------')
+
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
+
+
+
+
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------')
 
 #4. Faça umprograma que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
