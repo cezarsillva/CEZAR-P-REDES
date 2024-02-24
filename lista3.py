@@ -4,14 +4,14 @@ https://github.com/ifmt-cba/lp20241
 
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
-#print('-------------------------------------------------------------------------------------')
+# print('-------------------------------------------------------------------------------------')
 
-#1.Faça um programa que imprima todos os números de 1 até 100.
+# 1.Faça um programa que imprima todos os números de 1 até 100.
 
-#x = 1
-#while x <= 100:
-    #print(x)
-    #x = x + 1
+# x = 1
+# while x <= 100:
+#     print(x)
+#     x = x + 1
 
 
 #print('-------------------------------------------------------------------------------------')
@@ -19,10 +19,10 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
 
 
-#x = 100
-#while x >= 1:
-    #print(x)
-    #x = x - 1
+# x = 100
+# while x >= 1:
+#     print(x)
+#     x = x - 1
 
 
 #print('-------------------------------------------------------------------------------------')
@@ -31,6 +31,16 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
+
+num = int(input())
+
+print('Divisores de',(num),'são:')
+
+for i in range(1, num + 1):
+
+    if num % i == 0:
+
+        print('{}'.format(i), end=' ')
 
 
 
