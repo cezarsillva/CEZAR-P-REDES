@@ -14,6 +14,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #     x = x + 1
 
 
+
 #print('-------------------------------------------------------------------------------------')
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
@@ -25,26 +26,18 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #     x = x - 1
 
 
+
+
+
 #print('-------------------------------------------------------------------------------------')
 
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
 
 
+# for m in range (1,500):
 
-
-num = int(input())
-
-print('Divisores de',(num),'são:')
-
-for i in range(1, num + 1):
-
-    if num % i == 0:
-
-        print('{}'.format(i), end=' ')
-
-
-
-
+#     if (m % 5) == 0:
+#         print(m)
 
 
 
@@ -54,10 +47,34 @@ for i in range(1, num + 1):
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
 
+# for x in range (20):
+#     nome = str(input ('Digite seu nome: '))
+#     idade = float(input ('Digite a idade: '))
+#     sexo = str(input ('Digite o sexo: '))
+#     if sexo == "m" and idade > 21:
+#         print(f'O nome da pessoa é: {nome}')
+#     else:
+#         print(f'Menor de idade.')
+
+
+#print('-------------------------------------------------------------------------------------')
+
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
 
+
+
+valor1 = float(input ('Digite o primeiro valor: '))
+valor2 = float(input ('Digite o segundo valor : '))
+
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------')
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 #a partir da soma dos anteriores. Exemplo:
