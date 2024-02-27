@@ -4,6 +4,15 @@ https://github.com/ifmt-cba/lp20241
 
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
+
+#Exemplo Professor:
+
+
+#  for x in range(10):
+#         print(x) # imprime de 0 a 9
+
+
+
 # print('-------------------------------------------------------------------------------------')
 
 # 1.Faça um programa que imprima todos os números de 1 até 100.
@@ -13,6 +22,18 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #     print(x)
 #     x = x + 1
 
+
+#Exemplo 1 Professor:
+
+#   x = 0
+#     while x < 10:
+#         print(x)
+#         x += 1 # é a mesma coisa que x = x + 1
+
+#Exemplo 2 Professor:
+
+#  for x in range(1,101):
+#         print(x, end = " ")
 
 
 #print('-------------------------------------------------------------------------------------')
@@ -26,7 +47,10 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #     x = x - 1
 
 
+#Exemplo Professor:
 
+#  for x in range(100,0,-2):
+#         print(x, end = " ")
 
 
 #print('-------------------------------------------------------------------------------------')
@@ -59,32 +83,52 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 #print('-------------------------------------------------------------------------------------')
 
+
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
 
 
 
-valor1 = float(input ('Digite o primeiro valor: '))
-valor2 = float(input ('Digite o segundo valor : '))
+# primeironum = int(input("Primeiro número: "))
+# segundonum = int(input("Segundo número: "))
 
-
-
-
+# x = 1
+# r = 0
+# while x <= segundonum:
+#     r = r + primeironum
+#     x = x + 1
+# print(f"{primeironum} x {segundonum} = {r}")
 
 
 
 #print('-------------------------------------------------------------------------------------')
+
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 #a partir da soma dos anteriores. Exemplo:
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
 
+
+x = 1
+
+while x < 20:
+    print(x)
+    x = x + 1
+
+
+
+#print('-------------------------------------------------------------------------------------')
+
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
+
+
+
+
 
 #8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
