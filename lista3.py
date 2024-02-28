@@ -4,6 +4,61 @@ https://github.com/ifmt-cba/lp20241
 
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
+#Exemplos meu:
+
+# contador = 0
+
+# while contador < 10:
+#     print(f'Valor do contador é {contador}')
+#     contador += 1
+
+# contador = 0
+
+# while contador < 10:
+#     contador += 1
+#     print(f'Valor do contador é {contador}')    
+# else:
+#     print(f'Fim do while e o valor do contador é {contador}')
+
+
+# print('-------------------------------------------------------------------------------------')
+
+
+# lista = [1, 2, 3, 4, 5]
+
+# print(item)
+
+
+# for item in lista:
+#     print(item)
+# else:
+#     print('Todos os items foram exibidos com sucesso')
+
+
+
+
+# print('-------------------------------------------------------------------------------------')
+
+
+
+
+# carro = ['gol', 'palio', 'celta', 'fusca']
+
+# for carro in carro:
+
+#     print(carro)
+
+
+# for i in range(4):
+#     print(i)
+#     print(carro[i])
+
+# for i in "fusca":
+#     print(i)
+
+
+
+# print('-------------------------------------------------------------------------------------')
 
 #Exemplo Professor:
 
@@ -111,12 +166,22 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• 1 + 2 = 3, quarto termo, etc.
 
 
-x = 1
 
-while x < 20:
-    print(x)
-    x = x + 1
+termo = int(input("Digite o numero de termos: "))
 
+termo1 = 0
+termo2 = 1
+
+print('{} * {}'.format(termo1, termo2), end='')
+
+cont = 3
+while cont <= termo:
+    termo3 = termo1 + termo2
+    print(' * {}'.format(termo3), end='')
+    termo1 = termo2
+    termo2 = termo3
+    cont += 1
+print(' = final')
 
 
 #print('-------------------------------------------------------------------------------------')
@@ -125,6 +190,16 @@ while x < 20:
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
+
+
+
+
+
+
+
+
+
+
 
 
 
