@@ -126,7 +126,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
 
-# for x in range (20):
+# for x in range (3):
 #     nome = str(input ('Digite seu nome: '))
 #     idade = float(input ('Digite a idade: '))
 #     sexo = str(input ('Digite o sexo: '))
@@ -167,21 +167,21 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
-termo = int(input("Digite o numero de termos: "))
+# termo = int(input("Digite o numero de termos: "))
 
-termo1 = 0
-termo2 = 1
+# termo1 = 0
+# termo2 = 1
 
-print('{} * {}'.format(termo1, termo2), end='')
+# print('{} * {}'.format(termo1, termo2), end='')
 
-cont = 3
-while cont <= termo:
-    termo3 = termo1 + termo2
-    print(' * {}'.format(termo3), end='')
-    termo1 = termo2
-    termo2 = termo3
-    cont += 1
-print(' = final')
+# cont = 3
+# while cont <= 20:
+#     termo3 = termo1 + termo2
+#     print(' * {}'.format(termo3), end='')
+#     termo1 = termo2
+#     termo2 = termo3
+#     cont += 1
+# print(' = final')
 
 
 #print('-------------------------------------------------------------------------------------')
@@ -191,27 +191,50 @@ print(' = final')
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
 
+# soma = 0
+
+# for x in range (15):
+#     nome = str(input("Digite o nome do aluno: "))
+#     nota1 = float(input("Digite a nota 1 do aluno: "))
+#     nota2 = float(input("Digite a nota 2 do aluno: "))
+
+#     media = (nota1 + nota2) / 2
+#     soma = soma + media
+
+#     print(f'A nota da prova 1 é {nota1} e a nota de prova2 é {nota2} sendo sua média: {media}')
+
+# mediageral = soma / 3
+
+# print(f'A média geral de turma é: {mediageral}')
 
 
 
+#print('-------------------------------------------------------------------------------------')
 
-
-
-
-
-
-
-
-
-
-
-#8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
+#8. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
 #calculado conforme a tabela a seguir:
 #Salário IRRF
 #Salário menor que R$1300,00 Isento
 #Salário maior ou igual a R$1300,00 e menor que R$2300,00 10% do salário bruto
 #Salário maior ou igual a R$2300,00 15% do salário bruto
+
+
+# for x in range (3):
+#     nome = str(input("Digite seu nome: "))
+#     salariobruto = float(input("Digite o salário bruto: "))
+   
+#     if salariobruto < 1300:
+#         print(f'O Fulano {nome} está isento de declaração.')
+
+#     if salariobruto >= 1300 and salariobruto < 2300:
+#         print(f'O Fulano {nome} ira pagar {salariobruto * 10 / 100} do seu salário.')
+
+#     if salariobruto >= 2300:
+#         print(f'O Fulano {nome} ira pagar {salariobruto * 15 /100} do seu salário.')
+
+
+#print('-------------------------------------------------------------------------------------')
 
 #9. No dia da estréia do filme "Procurando Dory", uma grande emissora de TV realizou
 #uma pesquisa logo após o encerramento do filme. Cada espectador respondeu
@@ -222,6 +245,37 @@ print(' = final')
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
+
+
+
+contador = 0
+
+for x in range (3):
+    idade = str(input("Digite a idade do entrevistado: "))
+    opiniao = float(input("Digite a opinião do entrevistado sendo: excelente - [3] bom - [2] regular - [1]: "))
+
+   
+
+
+
+    if opiniao == 1:
+        print(f'O entrevistado de {idade} anos achou regular o filme.')
+
+    if opiniao == 2:
+        print(f'O entrevistado de {idade} anos achou bom o filme.')
+
+
+    if opiniao == 3:
+        print(f'O entrevistado de {idade} anos achou excelente o filme.')
+
+
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------')
 
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
