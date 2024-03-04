@@ -246,27 +246,21 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
 
+soma = 0
+mediageral = 0
+for x in range (5):
+    idade = int(input("Digite a idade do entrevistado: "))
+    opiniao = int(input("Digite a opinião do entrevistado sendo: excelente - [3] bom - [2] regular - [1]: "))
+    
+    soma += idade
 
 
-contador = 0
-
-for x in range (3):
-    idade = str(input("Digite a idade do entrevistado: "))
-    opiniao = float(input("Digite a opinião do entrevistado sendo: excelente - [3] bom - [2] regular - [1]: "))
-
-   
+    mediageral = soma / 5
+    
 
 
-
-    if opiniao == 1:
-        print(f'O entrevistado de {idade} anos achou regular o filme.')
-
-    if opiniao == 2:
-        print(f'O entrevistado de {idade} anos achou bom o filme.')
-
-
-    if opiniao == 3:
-        print(f'O entrevistado de {idade} anos achou excelente o filme.')
+print(f'A média geral é: {mediageral}')
+#print(f'A média excelente é: {}')
 
 
 
@@ -274,6 +268,15 @@ for x in range (3):
 
 
 
+
+
+
+
+
+
+#print(f'A média das idades das pessoas que responderam excelente é:{}')
+# print ('A quantidade de pessoas que responderam regular é:{}')
+# print ('A percentagem de pessoas que responderam bom entre todos os expectadores analisados.:{}')
 
 #print('-------------------------------------------------------------------------------------')
 
