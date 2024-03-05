@@ -157,6 +157,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
+
 #print('-------------------------------------------------------------------------------------')
 
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
@@ -182,6 +183,17 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #     termo2 = termo3
 #     cont += 1
 # print(' = final')
+
+# Exemplo professor ----------------------------------------------------------------------------
+
+#   anterior = 0
+#     atual = 1
+#     print(atual, end = " ")
+#     for x in range(19):
+#         proximo = anterior + atual
+#         print(proximo, end = " ")
+#         anterior = atual
+#         atual = proximo
 
 
 #print('-------------------------------------------------------------------------------------')
@@ -246,37 +258,25 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
 
-soma = 0
-mediageral = 0
-for x in range (5):
-    idade = int(input("Digite a idade do entrevistado: "))
-    opiniao = int(input("Digite a opinião do entrevistado sendo: excelente - [3] bom - [2] regular - [1]: "))
-    
-    soma += idade
 
-
-    mediageral = soma / 5
-    
-
-
-print(f'A média geral é: {mediageral}')
-#print(f'A média excelente é: {}')
-
-
-
-
-
-
-
-
-
-
-
-
-
-#print(f'A média das idades das pessoas que responderam excelente é:{}')
-# print ('A quantidade de pessoas que responderam regular é:{}')
-# print ('A percentagem de pessoas que responderam bom entre todos os expectadores analisados.:{}')
+#  qtdePessoasExcelente = 0
+#     somaIdadeExcelente = 0
+#     qtdePessoasRegular = 0
+#     qtdePessoasBom = 0
+#     qtdeTotalPessoas = int(input('Número de Pessoas: '))
+#     for x in range(qtdeTotalPessoas):
+#         idade = int(input('Idade: '))
+#         opiniao = int(input('Opinião ([3]-Excelente - [2]-Bom - [1]-Regular): '))
+#         match(opiniao):
+#             case 1: qtdePessoasRegular += 1
+#             case 2: qtdePessoasBom += 1
+#             case 3:
+#                 qtdePessoasExcelente +=1
+#                 somaIdadeExcelente += idade
+#             case _: print('Opção Inválida!')
+#     print(f'Média idade excelente: {somaIdadeExcelente/qtdePessoasExcelente}')
+#     print(f'Qtde de pessoas regular: {qtdePessoasRegular}')
+#     print(f'% de pessoas que responderam bom: {qtdePessoasBom/qtdeTotalPessoas*100}%')
 
 #print('-------------------------------------------------------------------------------------')
 
@@ -289,6 +289,43 @@ print(f'A média geral é: {mediageral}')
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
     
+
+somagerali = 0
+mediagerali= 0
+somageralp = 0
+mediageralp = 0
+pesomediotimes = 0
+idademediatimes = 0
+
+
+for paises in range (4):
+    for jogadores in range (2):
+        idade = int(input("Digite a idade do jogador: "))
+        peso = float(input("Digite o peso do jogador: "))
+
+        somagerali += idade
+        somageralp += peso
+    
+
+    mediagerali = somagerali / 2
+    mediapeso = somageralp / 2
+
+    print(f'O peso médio e a idade média de cada um dos times é: ')
+    print(f'O atleta mais pesado de cada time é: ')
+    print(f'O atleta mais jovem de cada time é: ')
+
+    print(f' O peso médio de todos os participantes é: {mediapeso} e a idade média de todos os participantes: {mediagerali}')
+
+print(paises)
+
+
+
+
+
+
+
+
+ #print('-------------------------------------------------------------------------------------')   
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
@@ -494,3 +531,43 @@ print(f'A média geral é: {mediageral}')
 #analisadas.
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
 #idade.
+
+
+
+
+
+
+
+
+
+# somagerali = 0
+# mediagerali= 0
+# somageralp = 0
+# mediageralp = 0
+# pesomediotimes = 0
+# idademediatimes = 0
+
+
+# for paises in range (4):
+
+
+
+
+
+#     for jogadores in range (2):
+#         idade = int(input("Digite a idade do jogador: "))
+#         peso = float(input("Digite o peso do jogador: "))
+
+#         somagerali += idade
+#         somageralp += peso
+    
+
+#     mediagerali = somagerali / 2
+#     mediapeso = somageralp / 2
+
+#     print(f'O peso médio e a idade média de cada um dos times é: ')
+#     print(f'O atleta mais pesado de cada time é: ')
+#     print(f'O atleta mais jovem de cada time é: ')
+
+#     print(f' O peso médio de todos os participantes é: {mediapeso} e a idade média de todos os participantes: {mediagerali}')
+
