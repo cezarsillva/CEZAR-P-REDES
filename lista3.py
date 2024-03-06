@@ -290,33 +290,34 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• O peso médio e a idade média de todos os participantes.
     
 
-somagerali = 0
-mediagerali= 0
-somageralp = 0
-mediageralp = 0
+somatimesi = 0
+mediatimesi= 0
+somatimesp = 0
+mediatimesp = 0
+
 pesomediotimes = 0
 idademediatimes = 0
 
 
-for paises in range (4):
-    for jogadores in range (2):
+print('\n')
+for p in range (4):
+    for j in range (3):
         idade = int(input("Digite a idade do jogador: "))
         peso = float(input("Digite o peso do jogador: "))
+        #print(f'Time:{p}')
+        print('\n')
 
-        somagerali += idade
-        somageralp += peso
-    
+        somatimesi += idade
+        somatimesp += peso
+   
+    mediatimesi = somatimesi / 3
+    mediatimesp = somatimesp / 3
 
-    mediagerali = somagerali / 2
-    mediapeso = somageralp / 2
+    print(f'====================================')
+    print(f'O peso médio do time é: {mediatimesp} e a idade do time é: {mediatimesi}')
+    print(f'====================================')
+    print('\n')
 
-    print(f'O peso médio e a idade média de cada um dos times é: ')
-    print(f'O atleta mais pesado de cada time é: ')
-    print(f'O atleta mais jovem de cada time é: ')
-
-    print(f' O peso médio de todos os participantes é: {mediapeso} e a idade média de todos os participantes: {mediagerali}')
-
-print(paises)
 
 
 
