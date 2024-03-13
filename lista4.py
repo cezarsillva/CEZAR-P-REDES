@@ -1,82 +1,87 @@
-#10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
-#que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
-#jogadores, crie um programa que apresente as seguintes informações:
-#
-#• O peso médio e a idade média de cada um dos times; ------ok
-#• O atleta mais pesado de cada time;
-#• O atleta mais jovem de cada time;
-#• O peso médio e a idade média de todos os participantes.
-    
+#13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
+#de consumo. Para cada consumidor, são digitados os seguintes dados:
 
-somatimesi = 0
-mediatimesi= 0
-somatimesp = 0
-mediatimesp = 0
+#• número do consumidor
+#• quantidade de kWh consumidos durante o mês
+#• tipo (código) do consumidor
+#1-residencial, preço em reais por kWh = 0,3
+#2-comercial, preço em reais por kWh = 0,5
+#3-industrial, preço em reais por kWh = 0,7
 
-somamediaidadet = 0
-somamediapesot = 0
+#Os dados devem ser lidos até que seja encontrado o consumidor com número 0
+#(zero). O programa deve calcular e imprimir:
 
-maior = 0
-menor = 1000
+#• O custo total para cada consumidor
+#• O total de consumo para os três tipos de consumidor
+#• Amédia de consumo dos tipos 1 e 2
+
+
+#somacodigostipoconsumidor= 0
+#somaquantidadekwh = 0
+
+somakwhresidencial = 0
+somakwhcomercial = 0
+somakwhindustrial = 0
 
 print('\n')
-
-for p in range (3):
-    print(f'---------------------------------------')
-    for j in range (2):
-
-        print(f'time:{p+1}')
-        print(f' jogador:{j+1}')
-
-        idade = int(input("Digite a idade do jogador: "))
-        peso = float(input("Digite o peso do jogador: "))
-    
-        if peso > maior:
-            maior = peso
-
-        if idade < menor:
-            menor = idade
-
-        print('\n')
-
-        somatimesi += idade
-        somatimesp += peso
-
-
-    mediatimesi = somatimesi / 2
-    mediatimesp = somatimesp / 2
-
-    somamediaidadet += mediatimesi
-    somamediapesot += mediatimesp
-
-        
-
-
+for x in range(6):
     print(f'====================================')
+    print(f'Consumidor:{x+1}')
+    print('\n')
+    #numeroconsumidor = int(input("Digite o número do consumidor: "))
+    quantidadekwh = int(input("Digite a quantidade de KWH /mês: "))
+    #codigotipoconsumidor = int(input('Informe o código do consumidor sendo: [1=Residencial] [2=Comercial] [3=Industrial]: '))
 
-    print(f'O peso médio do time é: {mediatimesp}')
-    print(f'A idade média do time é: {mediatimesi}')
-    print(f'O atleta mais pesado do time tem: {maior} kg')
-    print(f'O atleta mais jovem do time tem: {menor} anos.')
-    
-    print(f'====================================')
-    
-    
-    somatimesi = 0
-    mediatimesi= 0
-    somatimesp = 0
-    mediatimesp = 0
 
-    maior = 0
-    menor = 1000
+    #somacodigostipoconsumidor += codigotipoconsumidor
+    #somaquantidadekwh += quantidadekwh
+
+totalkwhresidencial = somaresidencial += quantidadekwh
+totalkwhcomercial = somacomercial += quantidadekwh
+totalkwhindustrial = somaindustroal += quantidadekwh
+
+
+#print('\n')
+#print(f'Total de consumidor: {x}')
+#print('\n')
+
 
     print('\n')
+    if somacodigostipoconsumidor == 1:
+        print(f'O custo total do consumidor residencial é: {totalkwhresidencial* 0.03}')
 
-mediatodospi = somamediaidadet / 3
-mediatodospp = somamediapesot / 3
+    print('\n')
+    if somacodigostipoconsumidor == 2:
+        print(f'O custo total do consumidor comercial é: {totalkwhcomercial * 0.05}')
+
+    print('\n')
+    if somacodigostipoconsumidor == 3:
+        print(f'O custo total do consumidor industrial é: {totalkwhindustrial * 0.07}')
+
+
+
+
+
+
 
 print('\n')
 
-print(f'O peso médio de todos os participantes é: {mediatodospp} e a idade média de todos os participantes é:{mediatodospi}')
 
-print('\n')
+
+
+
+# print('\n')
+# print(f'O total de consumo para todos os consumidores é: {somaquantidadekwh}')
+# print('\n')
+
+
+
+# print(f'O custo total do consumidor é: ')
+# print(f'O total de consumo para todos os consumidores é:') ok
+# print(f'A média de consumo para o tipo 1 é:')
+# print(f'A média de consumo para o tipo 2 é:')
+
+
+
+
+

@@ -430,20 +430,6 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• O total de consumo para os três tipos de consumidor
 #• Amédia de consumo dos tipos 1 e 2
 
-print('\n')
-for x in range(3):
-    print(f'====================================')
-    print('\n')
-    numeroconsumidor = int(input("Digite o número do consumidor: "))
-    quantidadekwh = int(input("Digite a quantidade de KWH /mês: "))
-    codigoconsumidor = int(input('Informe o código do consumidor sendo: [1=Residencial] [2=Comercial] [3=Industrial]: '))
-
-    
-
-
-
-
-
 
 
 
