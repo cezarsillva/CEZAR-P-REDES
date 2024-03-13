@@ -350,12 +350,14 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
 
+
 contador = 100
 
 while contador < 200:
     contador += 1
 
     print(f'{contador}',end=' , ')
+
 
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
