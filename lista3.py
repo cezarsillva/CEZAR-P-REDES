@@ -369,29 +369,26 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 #Exemplo 1:
 
-contador = 100
+# contador = 100
 
-while contador < 200:
-    contador += 1
+# while contador < 200:
+#     contador += 1
 
-    print(f'{contador}')
+#     print(f'{contador}')
 
-print('\n')
+# print('\n')
 
-print(f'====================================')
+# print(f'====================================')
 
-print('\n')
+# print('\n')
 
-#Exemplo 2:
+# #Exemplo 2:
 
-total = 0
-for i in range (100, 200):
-    total = total + 1
-    print(total)
+# total = 100
 
-
-
-
+# for i in range (100, 200):
+#     total = total + 1
+#     print(total)
 
 
 #print('-------------------------------------------------------------------------------------') 
@@ -401,28 +398,73 @@ for i in range (100, 200):
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
 
+
+# a = 500000000
+# b = 700000000
+# ano = 0
+
+# while a < b:
+# 	a += a * 0.03
+# 	b += b * 0.02
+# 	ano += 1
+
+# print ( "O Pais A ultrapassa o pais B em %d anos" %ano )
+
+
+#print('-------------------------------------------------------------------------------------') 
+
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
+
 #• número do consumidor
 #• quantidade de kWh consumidos durante o mês
 #• tipo (código) do consumidor
 #1-residencial, preço em reais por kWh = 0,3
 #2-comercial, preço em reais por kWh = 0,5
 #3-industrial, preço em reais por kWh = 0,7
+
 #Os dados devem ser lidos até que seja encontrado o consumidor com número 0
 #(zero). O programa deve calcular e imprimir:
+
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
 #• Amédia de consumo dos tipos 1 e 2
 
+print('\n')
+for x in range(3):
+    print(f'====================================')
+    print('\n')
+    numeroconsumidor = int(input("Digite o número do consumidor: "))
+    quantidadekwh = int(input("Digite a quantidade de KWH /mês: "))
+    codigoconsumidor = int(input('Informe o código do consumidor sendo: [1=Residencial] [2=Comercial] [3=Industrial]: '))
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------') 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
 
+
+#print('-------------------------------------------------------------------------------------') 
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
 #• total de pessoas com menos de 21 anos
 #• total de pessoas com mais de 50 anos
 
+
+
+#print('-------------------------------------------------------------------------------------') 
 #16. Sabendo-se que a unidade lógica e aritmética calcula a divisão por meio de subtrações
 #sucessivas, criar um algoritmo que calcule e imprima o resto da divisão de
 #números inteiros lidos. Para isso, basta subtrair o divisor ao dividendo, sucessivamente,
@@ -436,6 +478,8 @@ for i in range (100, 200):
 #  5 é o Divisor
 #  2 é o Quociente (resultado inteiro da divisão)
 #  0 é o Resto da Divisão
+
+
 
 #17. Crie um programa que possa ler um conjunto de pedidos de compra e
 #calcule o valor total da compra. Cada pedido é composto pelos seguintes campos:
