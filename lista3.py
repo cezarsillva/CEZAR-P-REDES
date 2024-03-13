@@ -289,7 +289,6 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
     
-
 # somatimesi = 0
 # mediatimesi= 0
 # somatimesp = 0
@@ -298,16 +297,27 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 # somamediaidadet = 0
 # somamediapesot = 0
 
-
-
-
+# maior = 0
+# menor = 1000
 
 # print('\n')
+
 # for p in range (3):
+#     print(f'---------------------------------------')
 #     for j in range (2):
+
+#         print(f'time:{p+1}')
+#         print(f' jogador:{j+1}')
+
 #         idade = int(input("Digite a idade do jogador: "))
 #         peso = float(input("Digite o peso do jogador: "))
-#         print(f'Time:{p}')
+    
+#         if peso > maior:
+#             maior = peso
+
+#         if idade < menor:
+#             menor = idade
+
 #         print('\n')
 
 #         somatimesi += idade
@@ -320,44 +330,71 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #     somamediaidadet += mediatimesi
 #     somamediapesot += mediatimesp
 
+        
+
 
 #     print(f'====================================')
-#     print(f'O peso médio do time é: {mediatimesp} e a idade do time é: {mediatimesi}')
-#     print(f'====================================')
-#     print('\n')
 
+#     print(f'O peso médio do time é: {mediatimesp}')
+#     print(f'A idade média do time é: {mediatimesi}')
+#     print(f'O atleta mais pesado do time tem: {maior} kg')
+#     print(f'O atleta mais jovem do time tem: {menor} anos.')
+    
+#     print(f'====================================')
+    
+    
 #     somatimesi = 0
 #     mediatimesi= 0
 #     somatimesp = 0
 #     mediatimesp = 0
 
+#     maior = 0
+#     menor = 1000
+
+#     print('\n')
+
 # mediatodospi = somamediaidadet / 3
 # mediatodospp = somamediapesot / 3
 
+# print('\n')
 
 # print(f'O peso médio de todos os participantes é: {mediatodospp} e a idade média de todos os participantes é:{mediatodospi}')
 
-
-
-# print(f'O atleta mais pesado de cada time:')
-# print(f'O atleta mais jovem de cada time: ')
-
-
-
+# print('\n')
 
  #print('-------------------------------------------------------------------------------------')   
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
 
+#Exemplo 1:
 
 contador = 100
 
 while contador < 200:
     contador += 1
 
-    print(f'{contador}',end=' , ')
+    print(f'{contador}')
 
+print('\n')
+
+print(f'====================================')
+
+print('\n')
+
+#Exemplo 2:
+
+total = 0
+for i in range (100, 200):
+    total = total + 1
+    print(total)
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------') 
 
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
