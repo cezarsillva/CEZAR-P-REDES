@@ -1,32 +1,16 @@
-maior = 0
 
-for p in range (3):
-    print(f'---------------------------------------')
-    for j in range (2):
-
-        print(f'time:{p+1}')
-        print(f' jogador:{j+1}')
-
-        peso = int(input("Digite o peso do jogador: "))
-
-        if peso > maior:
-            maior = peso
-
-    print(f'O maior peso é {maior}Kg')
+for x in range (4):
+    
+    quantidadekwh = float(input("Digite a quantidade de KWH /mês: "))
+    codigotipoconsumidor = int(input('Informe o código do consumidor sendo: [1 = Residencial] [2 = Comercial] [3 = Industrial]: '))
 
 
+    if codigotipoconsumidor == 1:
+        print(F'O custo total do consumidor é: {quantidadekwh * 0.03}')
 
+    if codigotipoconsumidor == 2:
+        print(F'O custo total do consumidor é: {quantidadekwh * 0.05}')
 
+    if codigotipoconsumidor == 3:
+        print(F'O custo total do consumidor é: {quantidadekwh * 0.07}')
 
-
-
-
-# maior = 0
-# menor = 1000
-# for c in range(1, 6):
-#     n = int(input('Digite o peso da {} pessoa: '. format(c)))
-#     if n > maior:
-#         maior = n
-#     if n < menor:
-#         menor = n
-# print('O menor peso é {}Kg e o maior peso é {}Kg'.format(menor, maior))
