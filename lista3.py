@@ -433,10 +433,6 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
-
-
-
-
 #print('-------------------------------------------------------------------------------------') 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
@@ -627,5 +623,3 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #analisadas.
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
 #idade.
-
-

@@ -19,13 +19,10 @@
 somacodigostipoconsumidor= 0
 somaquantidadekwh = 0
 
-codigo1 = 0
-codigo2 = 0
-codigo3 = 0
 
 print('\n')
 for x in range(4):
-    print(f'====================================')
+    print(f'#####################################################################################################################')
     print(f'Consumidor:{x+1}')
     print('\n')
     numeroconsumidor = int(input("Digite o número do consumidor: "))
@@ -34,28 +31,43 @@ for x in range(4):
 
     print('\n')
 
+    totalconsumidorresidencial = (quantidadekwh * 0.03 )
+    totalconsumidorcomercial = (quantidadekwh * 0.05 )
+    totalconsumidorindustrial = (quantidadekwh * 0.07 )
+
     if codigotipoconsumidor == 1:
-        print(F'O custo total do consumidor é: {quantidadekwh * 0.03}')
+        print(F'O consumidor é do tipo RESIDENCIAL e o custo total é: {totalconsumidorresidencial:.2f}')
     
     if codigotipoconsumidor == 2:
-        print(F'O custo total do consumidor é: {quantidadekwh * 0.05}')
+        print(F'O consumidor é do tipo COMERCIAL e o custo total é: {totalconsumidorcomercial:.2f}')
 
     if codigotipoconsumidor == 3:
-        print(F'O custo total do consumidor é: {quantidadekwh * 0.07}')
+        print(F'O consumidor é do tipo INDUSTRIAL e o custo total é: {totalconsumidorindustrial:.2f}')
     
     print('\n')
 
     somacodigostipoconsumidor += codigotipoconsumidor
     somaquantidadekwh += quantidadekwh
-
+print(f'#####################################################################################################################')
 print('\n')
 print(f'Total de consumidor: {x}')
 print('\n')
 
 print(f'O total de consumo em KWH para todos os consumidores é: {somaquantidadekwh}')
+
 print('\n')
 
-# print(f'O custo total do consumidor é: ')
+print(f'A média de consumo para o tipo 1 é:________')
+print(f'A média de consumo para o tipo 2 é:________')
+
+
+print('\n')
+print(f'#####################################################################################################################')
+
+
+
+
+# print(f'O custo total do consumidor é: ') ok
 # print(f'O total de consumo para todos os consumidores é:') ok
 # print(f'A média de consumo para o tipo 1 é:')
 # print(f'A média de consumo para o tipo 2 é:')

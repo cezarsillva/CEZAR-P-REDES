@@ -807,15 +807,6 @@ placa = input('Placa do veículo: ').upper().strip()
 
 
 
-
-
-
-
-
-
-
-
-
 #print(f'===========================================================================')
 
 #25. A prefeitura contratou uma firma especializada para manter os níveis de
