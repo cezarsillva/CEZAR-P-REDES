@@ -19,6 +19,8 @@
 somacodigostipoconsumidor= 0
 somaquantidadekwh = 0
 
+soman1 = 0
+soman2 = 0
 
 print('\n')
 for x in range(4):
@@ -48,6 +50,7 @@ for x in range(4):
 
     somacodigostipoconsumidor += codigotipoconsumidor
     somaquantidadekwh += quantidadekwh
+
 print(f'#####################################################################################################################')
 print('\n')
 print(f'Total de consumidor: {x}')
@@ -57,8 +60,11 @@ print(f'O total de consumo em KWH para todos os consumidores é: {somaquantidade
 
 print('\n')
 
-print(f'A média de consumo para o tipo 1 é:________')
-print(f'A média de consumo para o tipo 2 é:________')
+soman1 += totalconsumidorresidencial
+soman2 += totalconsumidorcomercial
+
+print(f'A média de consumo para o tipo 1 é:{soman1 / 4}')
+print(f'A média de consumo para o tipo 2 é:{soman2 / 4}')
 
 
 print('\n')
