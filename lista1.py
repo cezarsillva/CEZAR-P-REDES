@@ -361,3 +361,49 @@ Exercícios sobre os comandos básicos em Python
 #Escolha a questão a ser executadada:
 
 #def q17():
+
+
+
+
+
+# soman1 = 0
+# soman2 = 0
+
+
+
+
+# Exercicio aula tratamento de erro:
+
+# for x in range(3):
+#     print(f'Aluno: {x+1}')
+#     print(f'###############################################')
+#     erro=True
+#     while erro == True:
+#         try:
+#             nota1 = float(input('Digite a primeira nota: '))
+#             erro=False
+#         except ValueError:
+#             print(f'Valor Invalido, apenas reais são validos para nota1.')
+#             erro=True
+#     erro=True
+#     while erro == True:
+#         try:
+#             nota2 = float(input('Digite a Segunda nota: '))
+#             erro=False
+#         except ValueError:
+#             print(f'Valor Invalido, apenas reais são validos para nota2.')
+#             erro=True
+
+
+#     media = (nota1 + nota2) / 2
+
+
+#     print(f'\nA média:{media}\n')
+
+
+#     soman2 += nota2
+#     soman1 += nota1
+
+
+# print(f'A media geral de nota 1 é: {soman1 / 3}')
+# print(f'A media geral de nota 2 é: {soman2 / 3}')
