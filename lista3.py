@@ -428,9 +428,63 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
-#• Amédia de consumo dos tipos 1 e 2
+#• A média de consumo dos tipos 1.
+#• A média de consumo dos tipos 2.
 
 
+# total_consumo_residencial = 0
+# total_consumo_comercial = 0
+# total_consumo_industrial = 0
+
+# total_consumidores_tipo1 = 0
+# total_consumidores_tipo2 = 0
+
+# total_consumo_tipo1 = 0
+# total_consumo_tipo2 = 0
+
+# print('\n')
+# for x in range(4):
+#     print(f'#####################################################################################################################')
+#     print(f'Consumidor:{x+1}')
+#     print('\n')
+#     numero_consumidor = int(input("Digite o número do consumidor: "))
+#     quantidade_kwh = float(input("Digite a quantidade de kWh consumidos durante o mês: "))
+#     tipo_consumidor = int(input("Digite o tipo de consumidor (1 - residencial, 2 - comercial, 3 - industrial): "))
+    
+#     if tipo_consumidor == 1:
+#         preco_por_kwh = 0.3
+#         total_consumo_residencial += quantidade_kwh
+#         total_consumidores_tipo1 += 1
+#         total_consumo_tipo1 += quantidade_kwh
+#     elif tipo_consumidor == 2:
+#         preco_por_kwh = 0.5
+#         total_consumo_comercial += quantidade_kwh
+#         total_consumidores_tipo2 += 1
+#         total_consumo_tipo2 += quantidade_kwh
+#     elif tipo_consumidor == 3:
+#         preco_por_kwh = 0.7
+#         total_consumo_industrial += quantidade_kwh
+#     else:
+#         print("Tipo de consumidor inválido!")
+    
+#     custo_total = quantidade_kwh * preco_por_kwh
+#     print('\n')
+#     print('----------------------------------------------------------------------------')
+#     print(f"O custo total para o consumidor {numero_consumidor} é: R$ {custo_total:.2f}")
+#     print('----------------------------------------------------------------------------')
+# media_consumo_tipo1 = total_consumo_tipo1 / total_consumidores_tipo1 if total_consumidores_tipo1 != 0 else 0
+# media_consumo_tipo2 = total_consumo_tipo2 / total_consumidores_tipo2 if total_consumidores_tipo2 != 0 else 0
+
+
+# print("Resumo:")
+
+# print(f"Total de consumo residencial: {total_consumo_residencial} kWh")
+# print(f"Total de consumo comercial: {total_consumo_comercial} kWh")
+# print(f"Total de consumo industrial: {total_consumo_industrial} kWh")
+# print(f"Média de consumo do tipo 1: {media_consumo_tipo1:.2f} kWh")
+# print(f"Média de consumo do tipo 2: {media_consumo_tipo2:.2f} kWh")
+# print('\n')
+# print(f'#####################################################################################################################')
 
 
 #print('-------------------------------------------------------------------------------------') 
@@ -438,12 +492,50 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
 
 
-#print('-------------------------------------------------------------------------------------') 
+# def calcular_fatorial(numero):
+#     if numero == 0:
+#         return 1
+#     else:
+#         return numero * calcular_fatorial(numero - 1)
+
+# while True:
+#     numero = int(input("Digite um número inteiro (digite um número menor que 1 para sair): "))
+    
+#     if numero < 1:
+#         print(" FIM DO CALCULO")
+#         break
+    
+#     fatorial = calcular_fatorial(numero)
+#     print(f"O fatorial de {numero} é: {fatorial}")
+
+
+#print('-------------------------------------------------------------------------------------')
+
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
 #• total de pessoas com menos de 21 anos
 #• total de pessoas com mais de 50 anos
 
+
+# menos_de_21 = 0
+# mais_de_50 = 0
+# print('\n')
+# for x in range(6):
+#     print(f'#####################################################################################################################')
+#     print(f'PESSOAS:{x+1}')
+#     print('\n')
+#     idade = int(input("Digite a idade da pessoa: "))
+
+#     if idade < 21:
+#         menos_de_21 += 1
+#     elif idade > 50:
+#         mais_de_50 += 1
+
+# print(f'#####################################################################################################################')
+# print(f'------------------------------------------------------')
+# print(f"Total de pessoas com menos de 21 anos: {menos_de_21}")
+# print(f"Total de pessoas com mais de 50 anos: {mais_de_50}")
+# print(f'------------------------------------------------------')
 
 
 #print('-------------------------------------------------------------------------------------') 
@@ -463,6 +555,16 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
+
+
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------')
+
 #17. Crie um programa que possa ler um conjunto de pedidos de compra e
 #calcule o valor total da compra. Cada pedido é composto pelos seguintes campos:
 #• número de pedido
@@ -473,6 +575,44 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #O programa deverá processar novos pedidos até que o usuário digite 0 (zero)
 #como número do pedido.
 
+
+# def calcular_total_pedido(preco_unitario, quantidade):
+#     return preco_unitario * quantidade
+
+# total_compra = 0
+
+# while True:
+
+#     numero_pedido = input("Digite o número do pedido (ou '0' para finalizar a compra): ")
+    
+    
+#     if numero_pedido.lower() == '0':
+#         print("COMPRA FINALIZADA COM SUCESSO.")
+#         break
+    
+#     dia_pedido = int(input("Digite o dia do pedido: "))
+#     mes_pedido = int(input("Digite o mês do pedido: "))
+#     ano_pedido = int(input("Digite o ano do pedido: "))
+#     preco_unitario = float(input("Digite o preço unitário do item: "))
+#     quantidade = int(input("Digite a quantidade do item: "))
+    
+    
+#     total_pedido = calcular_total_pedido(preco_unitario, quantidade)
+    
+#     total_compra += total_pedido
+    
+#     print(f"--------------------------------------------------------------------")
+#     print(f"Pedido {numero_pedido} - Data: {dia_pedido}/{mes_pedido}/{ano_pedido}")
+#     print(f"Preço unitário: R$ {preco_unitario:.2f}")
+#     print(f"Quantidade: {quantidade}")
+#     print(f"Total do pedido: R$ {total_pedido:.2f}")
+#     print(f"--------------------------------------------------------------------")
+#     print()
+
+# print(f"Valor total da compra: R$ {total_compra:.2f}")
+
+
+#print('-------------------------------------------------------------------------------------')
 #18. Uma pousada estipulou o preço para a diária em R$30,00 e mais uma taxa de
 #serviços diários de:
 #• R$15,00, se o número de dias for menor que 10;
@@ -482,14 +622,32 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #O programa deverá ler novos clientes até que o usuário digite 0 (zero) como
 #número da conta.
 
+
+
+
+
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------')
 #19. Emuma Universidade, os alunos das turmas de informática fizeram uma prova
 #de algoritmos. Cada turma possui um número de alunos. Criar um programa que
 #imprima:
 #• quantidade de alunos aprovados;
 #• média de cada turma;
 #• percentual de reprovados.
-#Obs.: Considere aprovado comnota >= 7.0
+#Obs.: Considere aprovado com nota >= 7.0
 
+
+
+
+
+
+
+#print('-------------------------------------------------------------------------------------')
 #20. Uma pesquisa de opinião realizada no Rio de Janeiro, teve as seguintes perguntas:
 #• Qual o seu time de coração?
 #1-Fluminense;
@@ -511,6 +669,8 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #3.12. Exercícios da Aula 73
 #Obs.: O programa encerra quando se digita 0 para o time.
 
+
+#print('-------------------------------------------------------------------------------------')
 #21. Emuma universidade cada aluno possui os seguintes dados:
 #• Renda pessoal;
 #• Renda familiar;
@@ -522,6 +682,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #em relação às rendas pessoal e familiar.
 #Obs.: O programa encerra quando se digita 0 para a renda pessoal.
 
+#print('-------------------------------------------------------------------------------------')
 #22. Crie um programa que ajude o DETRAN a saber o total de recursos que foram
 #arrecadados com a aplicação de multas de trânsito.
 #O algoritmo deve ler as seguintes informações para cada motorista:
@@ -534,6 +695,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #de multas.
 #Obs.: O programa encerra ao ler a carteira de motorista de valor 0.
 
+#print('-------------------------------------------------------------------------------------')
 #23. Crie um programa que leia um conjunto de informações (nome, sexo, idade, peso
 #e altura) dos atletas que participaram de uma olimpíada, e informar:
 #• a atleta do sexo feminino mais alta;
@@ -544,6 +706,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #Para resolver este exercício, consulte a aula 7 que aborda o tratamento de strings,
 #como comparação e atribuição de textos.
 
+#print('-------------------------------------------------------------------------------------')
 #24. Faça um programa que calcule quantos litros de gasolina são usados em uma
 #viagem, sabendo que um carro faz 10 km/litro. O usuário fornecerá a velocidade
 #do carro e o período de tempo que viaja nesta velocidade para cada trecho do
@@ -555,6 +718,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #quando o usuário informar umvalor negativo de velocidade.
 #74 Aula 3. Estruturas de Iteração
 
+#print('-------------------------------------------------------------------------------------')
 #25. Faça umprograma que calcule o imposto de renda de umgrupo de contribuintes,
 #considerando que:
 #a) os dados de cada contribuinte (CIC, número de dependentes e renda bruta
@@ -575,6 +739,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #Receita Federal e o número de contribuintes isentos;
 #h) leve em consideração o fato de o primeiro CIC informado poder ser zero.
 
+#print('-------------------------------------------------------------------------------------')
 #26. Foi feita uma pesquisa de audiência de canal de TV em várias casas de uma
 #certa cidade, em umdeterminado dia. Para cada casa visitada foram fornecidos o
 #número do canal (4, 5, 7, 12) e o número de pessoas que estavam assistindo a ele
@@ -585,6 +750,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• Calcule e imprima a porcentagem de audiência em cada canal.
 #Obs.: Para encerrar a entrada de dados, digite o número do canal zero.
 
+#print('-------------------------------------------------------------------------------------')
 #27. Crie um programa que calcule e imprima o CR do período para os alunos de
 #computação. Para cada aluno, o algoritmo deverá ler:
 #• número da matrícula;
@@ -596,6 +762,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #válidas de 1 a 5000);
 #• CR do aluno é igual à média aritmética de suas notas.
 
+#print('-------------------------------------------------------------------------------------')
 #28. Construa umprograma que receba a idade, a altura e o peso de várias pessoas,
 #Calcule e imprima:
 #3.12. Exercícios da Aula 75
@@ -604,6 +771,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• a porcentagem de pessoas com peso inferior a 40 quilos entre todas as
 #pessoas analisadas.
 
+#print('-------------------------------------------------------------------------------------')
 #29. Construa um programa que receba o valor e o código de várias mercadorias
 #vendidas em umdeterminado dia. Os códigos obedecem a lista a seguir:
 #L-limpeza
@@ -614,6 +782,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• o total vendido naquele dia em cada um dos códigos.
 #Obs.: Para encerrar a entrada de dados, digite o valor da mercadoria zero.
 
+#print('-------------------------------------------------------------------------------------')
 #30. Faça um programa que receba a idade e o estado civil (C-casado, S-solteiro, Vviúvo
 #e D-desquitado ou separado) de várias pessoas. Calcule e imprima:
 #• a quantidade de pessoas casadas;
