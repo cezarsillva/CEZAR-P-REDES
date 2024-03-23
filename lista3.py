@@ -557,12 +557,6 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
-
-
-
-
-
-
 #print('-------------------------------------------------------------------------------------')
 
 #17. Crie um programa que possa ler um conjunto de pedidos de compra e
