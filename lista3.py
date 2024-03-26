@@ -442,15 +442,43 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 # total_consumo_tipo1 = 0
 # total_consumo_tipo2 = 0
 
+# #preco_por_kwh = 0
+
 # print('\n')
 # for x in range(4):
 #     print(f'#####################################################################################################################')
 #     print(f'Consumidor:{x+1}')
 #     print('\n')
-#     numero_consumidor = int(input("Digite o número do consumidor: "))
-#     quantidade_kwh = float(input("Digite a quantidade de kWh consumidos durante o mês: "))
-#     tipo_consumidor = int(input("Digite o tipo de consumidor (1 - residencial, 2 - comercial, 3 - industrial): "))
-    
+
+#     erro=True
+#     while erro == True:
+#         try:
+#             numero_consumidor = int(input("Digite o número do consumidor: "))
+#             erro=False
+#         except ValueError:
+#             print(f'Valor Invalido, Digite apenas numeros inteiros.')
+#             erro=True
+#     erro=True
+#     while erro == True:
+#         try:
+#             quantidade_kwh = float(input("Digite a quantidade de kWh consumidos durante o mês: "))
+#             erro=False
+#         except ValueError:
+#             print(f'Valor Invalido, Digite o valor em números reais.')
+#             erro=True
+#     erro=True
+#     while erro == True:
+#         try:
+#             tipo_consumidor = int(input("Digite o tipo de consumidor (1 - residencial, 2 - comercial, 3 - industrial): "))
+#             if tipo_consumidor < 1 or tipo_consumidor > 3:
+#                 raise ValueError('Valor inválido')
+#             erro=False
+#         except ValueError:
+#             print(f'Valor Invalido, Digite apenas o número 1 , 2 ou 3.')
+#             erro=True
+#         finally:
+#             print(f'Insira a informação do próximo consumidor!!!!!!')
+
 #     if tipo_consumidor == 1:
 #         preco_por_kwh = 0.3
 #         total_consumo_residencial += quantidade_kwh
@@ -464,10 +492,10 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #     elif tipo_consumidor == 3:
 #         preco_por_kwh = 0.7
 #         total_consumo_industrial += quantidade_kwh
-#     else:
-#         print("Tipo de consumidor inválido!")
+    
     
 #     custo_total = quantidade_kwh * preco_por_kwh
+
 #     print('\n')
 #     print('----------------------------------------------------------------------------')
 #     print(f"O custo total para o consumidor {numero_consumidor} é: R$ {custo_total:.2f}")
@@ -485,6 +513,51 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 # print(f"Média de consumo do tipo 2: {media_consumo_tipo2:.2f} kWh")
 # print('\n')
 # print(f'#####################################################################################################################')
+
+
+
+
+
+
+#Exemplo meu sala de aula somar quantidade de consumidor:
+
+
+
+
+
+
+# somaconsumidor1 = 0
+# somaconsumidor2 = 0
+# somaconsumidor3 = 0
+
+# print('\n')
+# for x in range(4):
+#     print(f'########################################################################################')
+#     print(f'Consumidor:{x+1}')
+#     print('\n')
+   
+#     numeroconsumidor = int(input("Digite o número do consumidor: "))
+#     quantidadekwh = float(input("Digite a quantidade de KWH /mês: "))
+#     codigotipoconsumidor = int(input('Informe o código do consumidor sendo: [1 = Residencial] [2 = Comercial] [3 = Industrial]: '))
+
+
+
+
+#     if codigotipoconsumidor == 1:
+#         somaconsumidor1 += 1
+#     elif codigotipoconsumidor == 2:
+#         somaconsumidor2 += 1
+#     elif codigotipoconsumidor == 3:        
+#         somaconsumidor3 += 1
+#     else:
+#         print("Tipo de consumidor inválido!")
+
+# print(f'A quantidade de consumidor tipo 1 é:{somaconsumidor1}')
+# print(f'A quantidade de consumidor tipo 1 é:{somaconsumidor2}')
+# print(f'A quantidade de consumidor tipo 1 é:{somaconsumidor3}')
+
+
+
 
 
 #print('-------------------------------------------------------------------------------------') 
@@ -607,6 +680,8 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 #print('-------------------------------------------------------------------------------------')
+
+
 #18. Uma pousada estipulou o preço para a diária em R$30,00 e mais uma taxa de
 #serviços diários de:
 #• R$15,00, se o número de dias for menor que 10;
@@ -615,6 +690,13 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #cliente e ao final o total faturado pela pousada.
 #O programa deverá ler novos clientes até que o usuário digite 0 (zero) como
 #número da conta.
+
+
+
+
+
+
+
 
 
 
@@ -641,19 +723,35 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 #print('-------------------------------------------------------------------------------------')
 #20. Uma pesquisa de opinião realizada no Rio de Janeiro, teve as seguintes perguntas:
+
 #• Qual o seu time de coração?
 #1-Fluminense;
 #2-Botafogo;
 #3-Vasco;
 #4-Flamengo;
 #5-Outros
+
 #• Onde você mora?
 #1-RJ;
 #2-Niterói;
 #3-Outros
+
 #• Qual o seu salário?
+
 #Faça um programa que imprima:
 #• o número de torcedores por clube;
 #• a média salarial dos torcedores do Botafogo;
@@ -662,6 +760,36 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #• o número de pessoas de Niterói torcedoras do Fluminense
 #3.12. Exercícios da Aula 73
 #Obs.: O programa encerra quando se digita 0 para o time.
+
+
+time = str(input('Digite o nome do time: 1 para '))
+endereco = str(input('Digite o nome do time: '))
+salario = float(input('Digite o nome do time: '))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #print('-------------------------------------------------------------------------------------')
