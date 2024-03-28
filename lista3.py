@@ -703,13 +703,8 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 
 
 
-
-
-
-
-
 #print('-------------------------------------------------------------------------------------')
-#19. Emuma Universidade, os alunos das turmas de informática fizeram uma prova
+#19. Em uma Universidade, os alunos das turmas de informática fizeram uma prova
 #de algoritmos. Cada turma possui um número de alunos. Criar um programa que
 #imprima:
 #• quantidade de alunos aprovados;
@@ -762,33 +757,9 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #Obs.: O programa encerra quando se digita 0 para o time.
 
 
-time = str(input('Digite o nome do time: 1 para '))
-endereco = str(input('Digite o nome do time: '))
-salario = float(input('Digite o nome do time: '))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# time = str(input('Digite o nome do time: 1 para '))
+# endereco = str(input('Digite o nome do time: '))
+# salario = float(input('Digite o nome do time: '))
 
 
 
