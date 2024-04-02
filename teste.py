@@ -43,14 +43,13 @@ for x in range(3):
 	time = int(input('Digite o nome do time sendo Fluminense = 1 Botafogo = 2 Vasco = 3 Flamengo = 4 Outros = 5:  '))
 	endereco = int(input('Digite o endereço do pesquisado sendo Rio de janeiro = 1 Niterói = 2 Outros = 3: '))
 	salario = float(input('Digite o salario do pesquisado: '))
-
 	if time == 1:
 		quantidadefluminense += 1
 		print(f' Torcedor do Fluminense.')
 	elif time == 2:
 		quantidadebotafogo += 1
 		totalbotafogo += salario
-        print(f' Torcedor do Botafogo.')
+		print(f' Torcedor do Botafogo.')
 	elif time == 3:
 		quantidadevasco += 1
 		print(f' Torcedor do Vasco.')
@@ -60,10 +59,9 @@ for x in range(3):
 	elif time == 5:
 		quantidadeoutros += 1
 		print(f' Torcedor de outros clubes.')
-    else:
-        print(f'O opção inválida.......')
-
-
+	else:
+		print(f'O opção inválida.......')
+		
 	if endereco == 1:
 		quantidaderiodejaneiro += 1
 		print(f' Torcedor mora no Rio de janeiro.')
@@ -73,17 +71,18 @@ for x in range(3):
 	elif endereco == 3:
 		quantidadeoutrosenderecos += 1
 		print(f' Torcedor mora em outras Cidades.')
-    else:
-        print(f'O opção inválida.......')
+	else:
+		print(f'O opção inválida.......')
 		
+
 		
-		
-	#mediabotafogo = totalbotafogo / quantidadebotafogo
+mediabotafogo = totalbotafogo / quantidadebotafogo
+
 
 print('\n')
 print(f'----------------------------------------------------------------')
 
-print(f'A média salarial dos torcedores do Botafogo é:  ')
+print(f'A média salarial dos torcedores do Botafogo é: {mediabotafogo}')
 
 print(f'----------------------------------------------------------------')
 
@@ -98,3 +97,12 @@ print(f'A quantidade de torcedores do Vasco  é: {quantidadevasco} ')
 print(f'A quantidade de torcedores do Flamengo  é: {quantidadeflamengo} ')
 
 print(f'A quantidade de torcedores dos outros clubes  é: {quantidadeoutros} ')
+
+
+
+
+
+
+
+
+print(f'O número de pessoas moradoras do Rio de Janeiro, torcedores de outros')
