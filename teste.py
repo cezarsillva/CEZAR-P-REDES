@@ -48,21 +48,20 @@ for x in range(3):
 		quantidadefluminense += 1
 		print(f' Torcedor do Fluminense.')
 	elif time == 2:
-        quantidadebotafogo += 1
-        #totalbotafogo += salario
+		quantidadebotafogo += 1
+		totalbotafogo += salario
         print(f' Torcedor do Botafogo.')
-	elif time == 3:        
+	elif time == 3:
 		quantidadevasco += 1
 		print(f' Torcedor do Vasco.')
-	elif time == 4:        
+	elif time == 4:
 		quantidadeflamengo += 1
 		print(f' Torcedor do Flamengo.')
-	elif time == 5:        
+	elif time == 5:
 		quantidadeoutros += 1
 		print(f' Torcedor de outros clubes.')
     else:
         print(f'O opção inválida.......')
-
 
 
 	if endereco == 1:
@@ -71,18 +70,20 @@ for x in range(3):
 	elif endereco == 2:
 		quantidadeniteroi += 1
 		print(f' Torcedor mora em Niterói.')
-	elif endereco == 3:        
+	elif endereco == 3:
 		quantidadeoutrosenderecos += 1
 		print(f' Torcedor mora em outras Cidades.')
     else:
         print(f'O opção inválida.......')
-
-#mediabotafogo = totalbotafogo / quantidadebotafogo
+		
+		
+		
+	#mediabotafogo = totalbotafogo / quantidadebotafogo
 
 print('\n')
 print(f'----------------------------------------------------------------')
 
-print(f'A média salarial dos torcedores do Botafogo é: {mediabotafogo} ')
+print(f'A média salarial dos torcedores do Botafogo é:  ')
 
 print(f'----------------------------------------------------------------')
 
