@@ -1,0 +1,125 @@
+services:
+  # --- Banco de dados MySQL ---
+  mysql-server:
+    image: mysql:8.0
+    container_name: zabbix-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: zabbix
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - redecezar
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- Zabbix Server ---
+  zabbix-server:
+    image: zabbix/zabbix-server-mysql:alpine-latest
+    container_name: zabbix-server
+    restart: unless-stopped
+    environment:
+      DB_SERVER_HOST: mysql-server
+      DB_SERVER_ROOT_PASSWORD: zabbix
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix
+    ports:
+      - "10051:10051"
+    depends_on:
+      mysql-server:
+        condition: service_healthy
+    volumes:
+      - zabbix_alertscripts:/usr/lib/zabbix/alertscripts
+      - zabbix_export:/var/lib/zabbix/export
+    networks:
+      - redecezar
+
+  # --- Interface Web (Nginx + PHP) ---
+  zabbix-web:
+    image: zabbix/zabbix-web-nginx-mysql:alpine-latest
+    container_name: zabbix-web
+    restart: unless-stopped
+    environment:
+      DB_SERVER_HOST: mysql-server
+      DB_SERVER_ROOT_PASSWORD: zabbix
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix
+      ZBX_SERVER_HOST: zabbix-server
+      PHP_TZ: America/Sao_Paulo
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    depends_on:
+      zabbix-server:
+        condition: service_started
+    networks:
+      - redecezar
+
+  # --- Agente principal (no mesmo host do Zabbix) ---
+  zabbix-agent2:
+    image: zabbix/zabbix-agent2:alpine-latest
+    container_name: zabbix-agent2
+    restart: unless-stopped
+    environment:
+      ZBX_SERVER_HOST: zabbix-server
+      ZBX_HOSTNAME: "Docker Host"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - zabbix-server
+    networks:
+      - redecezar
+
+  # --- Cliente 1 com agente ativo ---
+  Docker01:
+    image: zabbix/zabbix-agent2:alpine-latest
+    container_name: Docker01
+    restart: unless-stopped
+    environment:
+      ZBX_SERVER_HOST: zabbix-server
+      ZBX_HOSTNAME: Docker01
+    depends_on:
+      - zabbix-server
+    networks:
+      - redecezar
+
+  # --- Cliente 2 com agente ativo ---
+  Docker02:
+    image: zabbix/zabbix-agent2:alpine-latest
+    container_name: Docker02
+    restart: unless-stopped
+    environment:
+      ZBX_SERVER_HOST: zabbix-server
+      ZBX_HOSTNAME: Docker02
+    depends_on:
+      - zabbix-server
+    networks:
+      - redecezar
+
+# --- Rede e Volumes ---
+networks:
+  redecezar:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  zabbix_alertscripts:
+  zabbix_export:
+
+
+#como executar um docker compose:
+
+#docker compose up -d
+
+#http://localhost:8080
+
+#Usuário: Admin
+#Senha: zabbix
