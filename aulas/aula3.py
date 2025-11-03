@@ -1,2 +1,0 @@
-print("Aula 3")
-
