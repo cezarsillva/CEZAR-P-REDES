@@ -9,6 +9,7 @@ services:
       MYSQL_DATABASE: zabbix
       MYSQL_USER: zabbix
       MYSQL_PASSWORD: zabbix
+    command: --log-bin-trust-function-creators=1
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
