@@ -1,7 +1,8 @@
+version: "3.9"
+
 services:
-  # --- Banco de dados MySQL ---
   mysql-server:
-    image: mysql:8.0
+    image: mysql:8.0.38
     container_name: zabbix-mysql
     restart: unless-stopped
     environment:
@@ -13,16 +14,16 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
-      - redecezar
+      redecezar:
+        ipv4_address: 172.20.0.2
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
       timeout: 5s
       retries: 5
 
-  # --- Zabbix Server ---
   zabbix-server:
-    image: zabbix/zabbix-server-mysql:alpine-latest
+    image: zabbix/zabbix-server-mysql:alpine-7.4-latest
     container_name: zabbix-server
     restart: unless-stopped
     environment:
@@ -40,11 +41,11 @@ services:
       - zabbix_alertscripts:/usr/lib/zabbix/alertscripts
       - zabbix_export:/var/lib/zabbix/export
     networks:
-      - redecezar
+      redecezar:
+        ipv4_address: 172.20.0.3
 
-  # --- Interface Web (Nginx + PHP) ---
   zabbix-web:
-    image: zabbix/zabbix-web-nginx-mysql:alpine-latest
+    image: zabbix/zabbix-web-nginx-mysql:alpine-7.4-latest
     container_name: zabbix-web
     restart: unless-stopped
     environment:
@@ -54,7 +55,7 @@ services:
       MYSQL_USER: zabbix
       MYSQL_PASSWORD: zabbix
       ZBX_SERVER_HOST: zabbix-server
-      PHP_TZ: America/Sao_Paulo
+      PHP_TZ: America/Cuiaba
     ports:
       - "8080:8080"
       - "8443:8443"
@@ -62,11 +63,11 @@ services:
       zabbix-server:
         condition: service_started
     networks:
-      - redecezar
+      redecezar:
+        ipv4_address: 172.20.0.4
 
-  # --- Agente principal (no mesmo host do Zabbix) ---
   zabbix-agent2:
-    image: zabbix/zabbix-agent2:alpine-latest
+    image: zabbix/zabbix-agent2:alpine-7.4-latest
     container_name: zabbix-agent2
     restart: unless-stopped
     environment:
@@ -77,11 +78,11 @@ services:
     depends_on:
       - zabbix-server
     networks:
-      - redecezar
+      redecezar:
+        ipv4_address: 172.20.0.5
 
-  # --- Cliente 1 com agente ativo ---
   Docker01:
-    image: zabbix/zabbix-agent2:alpine-latest
+    image: zabbix/zabbix-agent2:alpine-7.4-latest
     container_name: Docker01
     restart: unless-stopped
     environment:
@@ -90,11 +91,11 @@ services:
     depends_on:
       - zabbix-server
     networks:
-      - redecezar
+      redecezar:
+        ipv4_address: 172.20.0.6
 
-  # --- Cliente 2 com agente ativo ---
   Docker02:
-    image: zabbix/zabbix-agent2:alpine-latest
+    image: zabbix/zabbix-agent2:alpine-7.4-latest
     container_name: Docker02
     restart: unless-stopped
     environment:
@@ -103,12 +104,16 @@ services:
     depends_on:
       - zabbix-server
     networks:
-      - redecezar
+      redecezar:
+        ipv4_address: 172.20.0.7
 
-# --- Rede e Volumes ---
 networks:
   redecezar:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
 
 volumes:
   mysql_data:
