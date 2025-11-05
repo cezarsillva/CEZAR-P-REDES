@@ -125,6 +125,7 @@ volumes:
 
 #como executar um docker compose:
 
+
 #docker compose up -d
 
 #http://localhost:8080
@@ -132,33 +133,6 @@ volumes:
 #Usuário: Admin
 #Senha: zabbix
 
-
-#-----------------------COMO ADICIONAR OS HOST PARA MONITORAMENTO-----------------------------------------------------
-
-
-#Configuration → Hosts → Create Host.
-
-#Preencha:
-
-#Host name: Docker01 (mesmo do ZBX_HOSTNAME)
-
-#Groups: Linux servers (ou crie Docker hosts)
-
-#Agent interfaces:
-
-#Type: Zabbix agent
-
-#IP: container name (Docker01) ou IP do container na rede Docker
-
-#Port: 10050 (padrão do agente Zabbix)
-
-#Vincule templates:
-
-#Template OS Linux → monitora CPU, memória, disco e rede.
-
-#Se quiser, adicione templates Docker se você instalar o monitor de Docker.
-
-#Repita para Docker02.
 
 
 
