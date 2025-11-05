@@ -8,7 +8,7 @@ O projeto inclui o servidor Zabbix, frontend web, banco de dados MySQL e vários
 
 Serviços incluídos
 
-- mysql-server
+- mysql-server ---------------------------------------------------------------------------------------------------------------------------
 
 Imagem: mysql:8.0.38
 
@@ -31,7 +31,7 @@ mysql_data → persistência dos dados do MySQL.
 Healthcheck: Verifica se o banco está acessível antes de iniciar o servidor Zabbix.
 
 
-- zabbix-server
+- zabbix-server --------------------------------------------------------------------------------------------------------------------------
 
 Imagem: zabbix/zabbix-server-mysql:alpine-7.4-latest
 
@@ -49,7 +49,7 @@ zabbix_export → exportação de templates e dados.
 
 
 
-- zabbix-web
+- zabbix-web --------------------------------------------------------------------------------------------------------------------------
 
 Imagem: zabbix/zabbix-web-nginx-mysql:alpine-7.4-latest
 
@@ -75,7 +75,7 @@ ou
 https://localhost:8443
 
 
-- zabbix-agent2
+- zabbix-agent2 ----------------------------------------------------------------------------------------------------------------------
 
 Imagem: zabbix/zabbix-agent2:alpine-7.4-latest
 
@@ -88,7 +88,7 @@ Volumes:
 Hostname no Zabbix: Docker Host
 
 
-- Docker01 e Docker02
+- Docker01 e Docker02 -------------------------------------------------------------------------------------------------------------
 
 Imagem: zabbix/zabbix-agent2:alpine-7.4-latest
 
@@ -100,7 +100,7 @@ Docker01
 
 Docker02
 
-- Rede
+- Rede ---------------------------------------------------------------------------------------------------------------------------
 
 O projeto utiliza uma rede bridge personalizada chamada redecezar, com o seguinte esquema de IPs fixos:
 
@@ -116,7 +116,7 @@ Sub-rede: 172.20.0.0/16
 Gateway: 172.20.0.1
 
 
-- Volumes
+- Volumes -----------------------------------------------------------------------------------------------------------------------
 
 Nome do volume 	             -------------------------                   Uso
 mysql_data	                 -------------------------      Armazena dados persistentes do MySQL
@@ -124,15 +124,15 @@ zabbix_alertscripts          -------------------------       Scripts personaliza
 zabbix_export	               -------------------------       Exportações de dados/templates
 
 
-Subir os contêineres
+- Subir os contêineres -----------------------------------------------------------------------------------------------------------
 
 docker compose up -d
 
-3. Verificar se todos os serviços estão ativos
+- Verificar se todos os serviços estão ativos -----------------------------------------------------------------------------------
 
 docker ps
 
-5. Acessar o Zabbix Web
+- Acessar o Zabbix Web ----------------------------------------------------------------------------------------------------------
 
 Abra o navegador e acesse:
 
@@ -144,3 +144,69 @@ Login padrão:
 Usuário: Admin
 
 Senha: zabbix
+
+
+- Cadastro manual via interface web -------------------------------------------------------------------------------------------
+
+Acesse o frontend Zabbix:
+
+http://localhost:8080
+
+
+Login padrão:
+
+Usuário: Admin
+
+Senha: zabbix
+
+Navegue até:
+
+Configuration → Hosts → Create host
+
+
+Preencha os campos:
+
+Para o primeiro agente (Docker Host):
+
+Host name: Docker Host
+
+* deve ser idêntico ao ZBX_HOSTNAME no docker-compose.yml
+
+Visible name: (opcional)
+
+Groups: Linux servers (ou crie um grupo Docker)
+
+Interfaces:
+
+Tipo: Agent
+
+IP: 172.20.0.5 (IP do contêiner zabbix-agent2)
+
+Port: 10050
+
+Templates:
+
+Clique em Templates → Link new template
+
+Escolha: Template OS Linux by Zabbix agent
+
+Clique em "Add"
+
+Repita para os outros dois agentes:
+
+Docker01
+
+Hostname: Docker01
+
+IP: 172.20.0.6
+
+Docker02
+
+Hostname: Docker02
+
+IP: 172.20.0.7
+
+Verifique os dados:
+Vá em Monitoring → Hosts
+
+Depois de alguns minutos, o status de cada host deverá mudar para verde (Available)
