@@ -125,10 +125,15 @@ volumes:
 
 #como executar um docker compose:
 
-
+#Subir o Docker:
 #docker compose up -d
 
+#Derrubar o Docker:
+#docker compose down -v
+
+
 #http://localhost:8080
+
 
 #Usuário: Admin
 #Senha: zabbix
