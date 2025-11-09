@@ -1,8 +1,30 @@
-version: "3.9"
+#Como executar o docker compose:
+
+#Subir o Docker:
+
+#docker compose up -d
+
+#Derrubar o Docker:
+
+#docker compose down -v
+
+
+#http://localhost:8080
+
+
+#Usuário: Admin
+#Senha: zabbix
+
+
+#Código Docker Compose + Zabbix para monitoramento:
+
+
+version: '3.9'
 
 services:
+  # --- Banco de dados MySQL ---
   mysql-server:
-    image: mysql:8.0.38
+    image: mysql:8.0
     container_name: zabbix-mysql
     restart: unless-stopped
     environment:
@@ -15,25 +37,26 @@ services:
       - mysql_data:/var/lib/mysql
     networks:
       redecezar:
-        ipv4_address: 172.20.0.2
+        ipv4_address: 172.28.0.2
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
       timeout: 5s
       retries: 5
 
+  # --- Zabbix Server ---
   zabbix-server:
-    image: zabbix/zabbix-server-mysql:alpine-7.4-latest
+    image: zabbix/zabbix-server-mysql:alpine-latest
     container_name: zabbix-server
     restart: unless-stopped
     environment:
-      DB_SERVER_HOST: mysql-server
+      DB_SERVER_HOST: 172.28.0.2
       DB_SERVER_ROOT_PASSWORD: zabbix
       MYSQL_DATABASE: zabbix
       MYSQL_USER: zabbix
       MYSQL_PASSWORD: zabbix
     ports:
-      - "10051:10051"
+      - "10051:10051"  # porta do Zabbix server
     depends_on:
       mysql-server:
         condition: service_healthy
@@ -42,19 +65,20 @@ services:
       - zabbix_export:/var/lib/zabbix/export
     networks:
       redecezar:
-        ipv4_address: 172.20.0.3
+        ipv4_address: 172.28.0.3
 
+  # --- Zabbix Web Interface ---
   zabbix-web:
-    image: zabbix/zabbix-web-nginx-mysql:alpine-7.4-latest
+    image: zabbix/zabbix-web-nginx-mysql:alpine-latest
     container_name: zabbix-web
     restart: unless-stopped
     environment:
-      DB_SERVER_HOST: mysql-server
+      DB_SERVER_HOST: 172.28.0.2
       DB_SERVER_ROOT_PASSWORD: zabbix
       MYSQL_DATABASE: zabbix
       MYSQL_USER: zabbix
       MYSQL_PASSWORD: zabbix
-      ZBX_SERVER_HOST: zabbix-server
+      ZBX_SERVER_HOST: 172.28.0.3
       PHP_TZ: America/Cuiaba
     ports:
       - "8080:8080"
@@ -64,81 +88,83 @@ services:
         condition: service_started
     networks:
       redecezar:
-        ipv4_address: 172.20.0.4
+        ipv4_address: 172.28.0.4
 
+  # --- Agente do Docker Host ---
   zabbix-agent2:
-    image: zabbix/zabbix-agent2:alpine-7.4-latest
+    image: zabbix/zabbix-agent2:alpine-latest
     container_name: zabbix-agent2
     restart: unless-stopped
     environment:
-      ZBX_SERVER_HOST: zabbix-server
-      ZBX_HOSTNAME: "Docker Host"
+      ZBX_SERVER_HOST: 172.28.0.3
+      ZBX_HOSTNAME: DockerHost
+      ZBX_ACTIVE: 172.28.0.3
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "10050:10050"  # permite monitorar do host via 127.0.0.1
     depends_on:
       - zabbix-server
     networks:
       redecezar:
-        ipv4_address: 172.20.0.5
+        ipv4_address: 172.28.0.5
 
+  # --- Cliente 1 ---
   Docker01:
-    image: zabbix/zabbix-agent2:alpine-7.4-latest
+    image: zabbix/zabbix-agent2:alpine-latest
     container_name: Docker01
     restart: unless-stopped
     environment:
-      ZBX_SERVER_HOST: zabbix-server
+      ZBX_SERVER_HOST: 172.28.0.3
       ZBX_HOSTNAME: Docker01
+      ZBX_ACTIVE: 172.28.0.3
     depends_on:
       - zabbix-server
     networks:
       redecezar:
-        ipv4_address: 172.20.0.6
+        ipv4_address: 172.28.0.6
 
+  # --- Cliente 2 ---
   Docker02:
-    image: zabbix/zabbix-agent2:alpine-7.4-latest
+    image: zabbix/zabbix-agent2:alpine-latest
     container_name: Docker02
     restart: unless-stopped
     environment:
-      ZBX_SERVER_HOST: zabbix-server
+      ZBX_SERVER_HOST: 172.28.0.3
       ZBX_HOSTNAME: Docker02
+      ZBX_ACTIVE: 172.28.0.3
     depends_on:
       - zabbix-server
     networks:
       redecezar:
-        ipv4_address: 172.20.0.7
+        ipv4_address: 172.28.0.7
 
+  # --- Agente do Zabbix Server ---
+  zabbix-server-agent:
+    image: zabbix/zabbix-agent2:alpine-latest
+    container_name: zabbix-server-agent
+    restart: unless-stopped
+    environment:
+      ZBX_SERVER_HOST: 172.28.0.3
+      ZBX_HOSTNAME: ZabbixServer
+      ZBX_ACTIVE: 172.28.0.3
+    depends_on:
+      - zabbix-server
+    networks:
+      redecezar:
+        ipv4_address: 172.28.0.8
+
+# --- Rede com IP fixo e gateway ---
 networks:
   redecezar:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.20.0.0/16
-          gateway: 172.20.0.1
+        - subnet: 172.28.0.0/16
+          gateway: 172.28.0.1
 
+# --- Volumes ---
 volumes:
   mysql_data:
   zabbix_alertscripts:
   zabbix_export:
-
-
-
-
-#como executar um docker compose:
-
-#Subir o Docker:
-#docker compose up -d
-
-#Derrubar o Docker:
-#docker compose down -v
-
-
-#http://localhost:8080
-
-
-#Usuário: Admin
-#Senha: zabbix
-
-
-
-
-
