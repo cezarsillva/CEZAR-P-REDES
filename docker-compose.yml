@@ -1,24 +1,3 @@
-#Como executar o docker compose:
-
-#Subir o Docker:
-
-#docker compose up -d
-
-#Derrubar o Docker:
-
-#docker compose down -v
-
-
-#http://localhost:8080
-
-
-#Usuário: Admin
-#Senha: zabbix
-
-
-#Código Docker Compose + Zabbix para monitoramento:
-
-
 version: '3.9'
 
 services:
