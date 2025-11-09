@@ -30,20 +30,20 @@ O projeto inclui:
 
 ---
 
-Como levantar o projeto
+- **Como levantar o projeto**
 
 
-Suba os containers:
+- **Suba os containers:**
 
 docker compose up -d
 
 
-Verifique os containers:
+- **Verifique os containers:**
 
 docker ps
 
 
-Acesse a interface web:
+- **Acesse a interface web:**
 
 http://localhost:8080
 https://localhost:8443
@@ -52,33 +52,34 @@ https://localhost:8443
 Usuário padrão: Admin
 Senha padrão: zabbix
 
-Verificar a rede interna
+- **Verificar a rede interna**
 
-Lista todas as redes Docker:
+- **Lista todas as redes Docker:**
 
 docker network ls
 
 
-Inspecione a rede redecezar:
+- **Inspecione a rede redecezar:**
 
 docker network inspect redecezar
 
 
-Aqui você verá os IPs fixos de cada container e sua comunicação interna.
+- **Aqui você verá os IPs fixos de cada container e sua comunicação interna.**
 
-Parar ou reiniciar o projeto
+- **Parar ou reiniciar o projeto**
 
-Parar:
+- **Parar:**
 
 docker compose down
 
 
-Reiniciar sem perder dados:
+- **Reiniciar sem perder dados:**
 
 docker compose up -d
 
-Estrutura de IPs
-Container	IP
+- **Estrutura de IPs**
+- 
+- **Container	IP**
 MySQL Server	172.28.0.2
 Zabbix Server	172.28.0.3
 Zabbix Web Interface	172.28.0.4
