@@ -29,3 +29,60 @@ O projeto inclui:
 - **Volumes persistentes** para manter dados importantes mesmo após reinicialização dos containers.
 
 ---
+
+Como levantar o projeto
+
+
+Suba os containers:
+
+docker compose up -d
+
+
+Verifique os containers:
+
+docker ps
+
+
+Acesse a interface web:
+
+http://localhost:8080
+https://localhost:8443
+
+
+Usuário padrão: Admin
+Senha padrão: zabbix
+
+Verificar a rede interna
+
+Lista todas as redes Docker:
+
+docker network ls
+
+
+Inspecione a rede redecezar:
+
+docker network inspect redecezar
+
+
+Aqui você verá os IPs fixos de cada container e sua comunicação interna.
+
+Parar ou reiniciar o projeto
+
+Parar:
+
+docker compose down
+
+
+Reiniciar sem perder dados:
+
+docker compose up -d
+
+Estrutura de IPs
+Container	IP
+MySQL Server	172.28.0.2
+Zabbix Server	172.28.0.3
+Zabbix Web Interface	172.28.0.4
+Docker Host Agent	172.28.0.5
+Cliente Docker01	172.28.0.6
+Cliente Docker02	172.28.0.7
+Zabbix Server Agent	172.28.0.8
