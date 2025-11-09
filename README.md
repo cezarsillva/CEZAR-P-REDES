@@ -78,12 +78,13 @@ docker compose down
 docker compose up -d
 
 - **Estrutura de IPs**
-- 
+
 - **Container	IP**
-MySQL Server	172.28.0.2
-Zabbix Server	172.28.0.3
-Zabbix Web Interface	172.28.0.4
-Docker Host Agent	172.28.0.5
-Cliente Docker01	172.28.0.6
-Cliente Docker02	172.28.0.7
-Zabbix Server Agent	172.28.0.8
+
+- MySQL Server	172.28.0.2
+- Zabbix Server	172.28.0.3
+- Zabbix Web Interface	172.28.0.4
+- Docker Host Agent	172.28.0.5
+- Cliente Docker01	172.28.0.6
+- Cliente Docker02	172.28.0.7
+- Zabbix Server Agent	172.28.0.8
