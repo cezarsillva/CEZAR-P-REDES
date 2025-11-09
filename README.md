@@ -29,14 +29,3 @@ O projeto inclui:
 - **Volumes persistentes** para manter dados importantes mesmo após reinicialização dos containers.
 
 ---
-
-## **Pré-requisitos**
-
-- Docker
-- Docker Compose
-
-Verifique as versões instaladas:
-
-```bash
-docker --version
-docker compose version
