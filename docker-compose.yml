@@ -13,7 +13,7 @@ services:
       MYSQL_PASSWORD: zabbix
     command: --log-bin-trust-function-creators=1
     volumes:
-      - mysql_data:/var/lib/mysql
+      - ./mysql_data:/var/lib/mysql
     networks:
       redecezar:
         ipv4_address: 172.28.0.2
@@ -144,6 +144,6 @@ networks:
 
 # --- Volumes ---
 volumes:
-  mysql_data:
+  #mysql_data:
   zabbix_alertscripts:
   zabbix_export:
