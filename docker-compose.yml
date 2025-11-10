@@ -1,7 +1,6 @@
 version: '3.9'
 
 services:
-  # --- Banco de dados MySQL ---
   mysql-server:
     image: mysql:8.0.40
     container_name: zabbix-mysql
@@ -23,9 +22,8 @@ services:
       timeout: 5s
       retries: 5
 
-  # --- Zabbix Server ---
   zabbix-server:
-    image: zabbix/zabbix-server-mysql:7.0.5-alpine
+    image: zabbix/zabbix-server-mysql:alpine-7.4.5
     container_name: zabbix-server
     restart: unless-stopped
     environment:
@@ -46,9 +44,8 @@ services:
       redecezar:
         ipv4_address: 172.28.0.3
 
-  # --- Zabbix Web Interface ---
   zabbix-web:
-    image: zabbix/zabbix-web-nginx-mysql:7.0.5-alpine
+    image: zabbix/zabbix-web-nginx-mysql:alpine-7.4.5
     container_name: zabbix-web
     restart: unless-stopped
     environment:
@@ -69,9 +66,8 @@ services:
       redecezar:
         ipv4_address: 172.28.0.4
 
-  # --- Agente do Docker Host ---
   zabbix-agent2:
-    image: zabbix/zabbix-agent2:7.0.5-alpine
+    image: zabbix/zabbix-agent2:alpine-7.4.5
     container_name: zabbix-agent2
     restart: unless-stopped
     environment:
@@ -88,9 +84,8 @@ services:
       redecezar:
         ipv4_address: 172.28.0.5
 
-  # --- Cliente 1 ---
   Docker01:
-    image: zabbix/zabbix-agent2:7.0.5-alpine
+    image: zabbix/zabbix-agent2:alpine-7.4.5
     container_name: Docker01
     restart: unless-stopped
     environment:
@@ -103,9 +98,8 @@ services:
       redecezar:
         ipv4_address: 172.28.0.6
 
-  # --- Cliente 2 ---
   Docker02:
-    image: zabbix/zabbix-agent2:7.0.5-alpine
+    image: zabbix/zabbix-agent2:alpine-7.4.5
     container_name: Docker02
     restart: unless-stopped
     environment:
@@ -118,9 +112,8 @@ services:
       redecezar:
         ipv4_address: 172.28.0.7
 
-  # --- Agente do Zabbix Server ---
   zabbix-server-agent:
-    image: zabbix/zabbix-agent2:7.0.5-alpine
+    image: zabbix/zabbix-agent2:alpine-7.4.5
     container_name: zabbix-server-agent
     restart: unless-stopped
     environment:
@@ -133,7 +126,6 @@ services:
       redecezar:
         ipv4_address: 172.28.0.8
 
-# --- Rede com IP fixo e gateway ---
 networks:
   redecezar:
     driver: bridge
@@ -142,7 +134,6 @@ networks:
         - subnet: 172.28.0.0/16
           gateway: 172.28.0.1
 
-# --- Volumes ---
 volumes:
   zabbix_alertscripts:
   zabbix_export:
