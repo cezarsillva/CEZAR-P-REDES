@@ -3,7 +3,7 @@ version: '3.9'
 services:
   # --- Banco de dados MySQL ---
   mysql-server:
-    image: mysql:8.0
+    image: mysql:8.0.40
     container_name: zabbix-mysql
     restart: unless-stopped
     environment:
@@ -25,7 +25,7 @@ services:
 
   # --- Zabbix Server ---
   zabbix-server:
-    image: zabbix/zabbix-server-mysql:alpine-latest
+    image: zabbix/zabbix-server-mysql:7.0.5-alpine
     container_name: zabbix-server
     restart: unless-stopped
     environment:
@@ -35,7 +35,7 @@ services:
       MYSQL_USER: zabbix
       MYSQL_PASSWORD: zabbix
     ports:
-      - "10051:10051"  # porta do Zabbix server
+      - "10051:10051"
     depends_on:
       mysql-server:
         condition: service_healthy
@@ -48,7 +48,7 @@ services:
 
   # --- Zabbix Web Interface ---
   zabbix-web:
-    image: zabbix/zabbix-web-nginx-mysql:alpine-latest
+    image: zabbix/zabbix-web-nginx-mysql:7.0.5-alpine
     container_name: zabbix-web
     restart: unless-stopped
     environment:
@@ -71,7 +71,7 @@ services:
 
   # --- Agente do Docker Host ---
   zabbix-agent2:
-    image: zabbix/zabbix-agent2:alpine-latest
+    image: zabbix/zabbix-agent2:7.0.5-alpine
     container_name: zabbix-agent2
     restart: unless-stopped
     environment:
@@ -81,7 +81,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - "10050:10050"  # permite monitorar do host via 127.0.0.1
+      - "10050:10050"
     depends_on:
       - zabbix-server
     networks:
@@ -90,7 +90,7 @@ services:
 
   # --- Cliente 1 ---
   Docker01:
-    image: zabbix/zabbix-agent2:alpine-latest
+    image: zabbix/zabbix-agent2:7.0.5-alpine
     container_name: Docker01
     restart: unless-stopped
     environment:
@@ -105,7 +105,7 @@ services:
 
   # --- Cliente 2 ---
   Docker02:
-    image: zabbix/zabbix-agent2:alpine-latest
+    image: zabbix/zabbix-agent2:7.0.5-alpine
     container_name: Docker02
     restart: unless-stopped
     environment:
@@ -120,7 +120,7 @@ services:
 
   # --- Agente do Zabbix Server ---
   zabbix-server-agent:
-    image: zabbix/zabbix-agent2:alpine-latest
+    image: zabbix/zabbix-agent2:7.0.5-alpine
     container_name: zabbix-server-agent
     restart: unless-stopped
     environment:
@@ -144,6 +144,5 @@ networks:
 
 # --- Volumes ---
 volumes:
-  #mysql_data:
   zabbix_alertscripts:
   zabbix_export:
