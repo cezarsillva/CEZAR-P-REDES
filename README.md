@@ -89,9 +89,9 @@ docker compose up -d
 - Cliente Docker02	172.28.0.7
 - Zabbix Server Agent	172.28.0.8
 
+---
 
-
-- **---------------------------------------------------------------------------------**
+- ** Como adicionar os templates no Zabbix **
 
 Configuration → Hosts → Create Host.
 
