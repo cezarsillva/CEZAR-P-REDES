@@ -88,3 +88,32 @@ docker compose up -d
 - Cliente Docker01	172.28.0.6
 - Cliente Docker02	172.28.0.7
 - Zabbix Server Agent	172.28.0.8
+
+
+
+- **---------------------------------------------------------------------------------**
+
+Configuration → Hosts → Create Host.
+
+Preencha:
+
+Host name: Docker01 (mesmo do ZBX_HOSTNAME)
+
+Groups: Linux servers (ou crie Docker hosts)
+
+Agent interfaces:
+
+Type: Zabbix agent
+
+IP: container name (Docker01) ou IP do container na rede Docker
+
+Port: 10050 (padrão do agente Zabbix)
+
+Vincule templates:
+
+Template OS Linux → monitora CPU, memória, disco e rede.
+
+Se quiser, adicione templates Docker se você instalar o monitor de Docker.
+
+Repita para Docker02.
+Repita para os outros a ser monitorado. Observando os ips e Host name.
